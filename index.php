@@ -39,9 +39,9 @@
                     <th>Value</th>
                 </tr>
                 <?php
-                    if ($result = $mysqli -> query("SELECT * FROM test")) {
+                    if ($result = $mysqli -> query("SELECT * FROM asserv")) {
                         while($row = $result -> fetch_row()) {
-                            echo "<tr><td>" . $row[0] . "</td><td>" . $row[1] . "</td></tr>";
+                            echo "<tr><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td></tr>";
                         }
                         $result -> close();	
                     }
