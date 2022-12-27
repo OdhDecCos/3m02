@@ -36,7 +36,8 @@
             <table>
                 <tr>
                     <th>Id</th>
-                    <th>Value</th>
+                    <th>Date</th>
+                    <th>Position</th>
                 </tr>
                 <?php
                     if ($result = $mysqli -> query("SELECT * FROM asserv")) {
