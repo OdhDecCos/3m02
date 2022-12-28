@@ -25,7 +25,7 @@
         <h1>Sudriabotik</h1>
         <ul>
             <li><a href="#asserv">Asserv</a></li>
-            <li><a href="#d">D</a></li>
+            <li><a href="#interface">Interface</a></li>
             <li><a href="#lidar">Lidar</a></li>
             <li><a href="#cam">Cam</a></li>
         </ul>
@@ -49,8 +49,8 @@
                 ?>
             </table>
         </section>
-        <section id="d">
-            <h1 class="section-title">Carte D</h1>
+        <section id="interface">
+            <h1 class="section-title">Carte Interface</h1>
             <table>
                 <tr>
                     <th>Id</th>
