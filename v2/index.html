@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudriabotik</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <button class="tab-select" data-active="active" onclick="tab(event, 'synthese')">Synthèse</button>
+        <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1')">R1</button>
+        <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2')">R2</button>
+        <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1-asserv')">R1-asserv</button>
+        <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2-asserv')">R2-asserv</button>
+        <button class="tab-select" data-active="inactive" onclick="tab(event, 'balise')">Balise</button>
+    </header>
+    <main>
+        <section class="tab" id="synthese" data-active="active">
+            <h1>Synthèse</h1>
+        </section>
+        <section class="tab" id="R1" data-active="inactive">
+            <h1>R1</h1>
+        </section>
+        <section class="tab" id="R2" data-active="inactive">
+            <h1>R2</h1>
+        </section>
+        <section class="tab" id="R1-asserv" data-active="inactive">
+            <h1>R1-asserv</h1>
+        </section>
+        <section class="tab" id="R2-asserv" data-active="inactive">
+            <h1>R2-asserv</h1>
+        </section>
+        <section class="tab" id="balise" data-active="inactive">
+            <h1>balise</h1>
+        </section>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>

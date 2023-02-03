@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.tab-select {
+    height: 100px;
+    background-color: white;
+}
+
+.tab-select[data-active="active"] {
+    background-color: lightgray;
+}
+
+main {
+    position: relative;
+}
+
+.tab {
+    position: absolute;
+}
+
+.tab[data-active="inactive"] {
+    display: none;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
