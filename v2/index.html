@@ -2,42 +2,157 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudriabotik</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudriabotik</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+      @layer components {
+          .btn {
+              @apply bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-600;
+          }
+      }
+  </style>
 </head>
 
 <body>
-    <header>
-        <button class="tab-select" data-active="active" onclick="tab(event, 'synthese')">Synthèse</button>
-        <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1')">R1</button>
-        <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2')">R2</button>
-        <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1-asserv')">R1-asserv</button>
-        <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2-asserv')">R2-asserv</button>
-        <button class="tab-select" data-active="inactive" onclick="tab(event, 'balise')">Balise</button>
-    </header>
-    <main>
-        <section class="tab" id="synthese" data-active="active">
-            <h1>Synthèse</h1>
-        </section>
-        <section class="tab" id="R1" data-active="inactive">
-            <h1>R1</h1>
-        </section>
-        <section class="tab" id="R2" data-active="inactive">
-            <h1>R2</h1>
-        </section>
-        <section class="tab" id="R1-asserv" data-active="inactive">
-            <h1>R1-asserv</h1>
-        </section>
-        <section class="tab" id="R2-asserv" data-active="inactive">
-            <h1>R2-asserv</h1>
-        </section>
-        <section class="tab" id="balise" data-active="inactive">
-            <h1>balise</h1>
-        </section>
-    </main>
+<header>
+  <button class="tab-select" data-active="active" onclick="tab(event, 'synthese')">Synthèse</button>
+  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1')">R1</button>
+  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2')">R2</button>
+  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1-asserv')">R1-asserv</button>
+  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2-asserv')">R2-asserv</button>
+  <button class="tab-select" data-active="inactive" onclick="tab(event, 'balise')">Balise</button>
+</header>
+<main>
+  <section class="tab" id="synthese" data-active="inactive">
+    <h1>Synthèse</h1>
+  </section>
+  <section class="tab" id="R1" data-active="active">
+    <h1 class="text-7xl font-bold">R1</h1>
+    <div class="flex w-screen">
+      <div class="w-1/2 h-full p-5 bg-green-400 rounded flex flex-col gap-4">
+        <div class="flex gap-4">
+          <div class="w-64 flex flex-col justify-center items-center p-2 bg-green-300 aspect-square">
+            <p>X_R1_odo</p>
+            <p>Y</p>
+            <p>Theta</p>
+          </div>
+          <div class="w-64 flex flex-col p-2 bg-green-300 rounded justify-center items-center">
+            <p class="font-bold">Mode</p>
+            <p class="text-3xl font-bold ">Automatisme</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex">
+            <label class="bg-green-200 rounded flex gap-6 p-5 items-center">
+              <span class="w-48">Moteur: direction</span>
+              <input class="px-6" type="text" name="moteur" id="moteur">
+              <button class="btn">Modifier</button>
+            </label>
+          </div>
+          <div class="flex">
+            <label class="bg-green-200 rounded flex gap-6 p-5 items-center">
+              <span class="w-48">PWM</span>
+              <input class="px-6" type="text" name="PWM" id="PWM">
+              <button class="btn">Modifier</button>
+            </label>
+          </div>
+          <div class="flex">
+            <label class="bg-green-200 rounded flex gap-6 p-5 items-center">
+              <span class="w-48">GPIO1</span>
+              <input class="px-6" type="text" name="GPIO1" id="GPIO1">
+              <button class="btn">Modifier</button>
+            </label>
+          </div>
+          <div class="flex">
+            <label class="bg-green-200 rounded flex gap-6 p-5 items-center">
+              <span class="w-48">GPIO2</span>
+              <input class="px-6" type="text" name="GPIO2" id="GPIO2">
+              <button class="btn">Modifier</button>
+            </label>
+          </div>
+          <div class="flex">
+            <label class="bg-green-200 rounded flex gap-6 p-5 items-center">
+              <span class="w-48">GPIO3</span>
+              <input class="px-6" type="text" name="GPIO3" id="GPIO3">
+              <button class="btn">Modifier</button>
+            </label>
+          </div>
+          <div class="flex">
+            <label class="bg-green-200 rounded flex gap-6 p-5 items-center">
+              <span class="w-48">GPIO4</span>
+              <input class="px-6" type="text" name="GPIO4" id="GPIO4">
+              <button class="btn">Modifier</button>
+            </label>
+          </div>
+          <div class="flex">
+            <label class="bg-green-200 rounded flex gap-6 p-5 items-center">
+              <span class="w-48">GPIO5</span>
+              <input class="px-6" type="text" name="GPIO5" id="GPIO5">
+              <button class="btn">Modifier</button>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="w-1/2 p-5 bg-green-100 flex flex-col gap-4">
+        <table class="table-auto w-full text-left border-separate border-spacing-2">
+          <thead class="bg-black text-white">
+            <tr>
+              <th>Ax12</th>
+              <th>Valeur</th>
+              <th>Nouvelle valeur</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="even:bg-gray-100 odd:bg-gray-300">
+              <td>AX12_1</td>
+              <td>222</td>
+              <td><label>
+                <input type="text"/>
+              </label></td>
+            </tr>
+            <tr class="even:bg-gray-100 odd:bg-gray-300">
+              <td>AX12_1</td>
+              <td>222</td>
+              <td><label>
+                <input type="text"/>
+              </label></td>
+            </tr>
+            <tr class="even:bg-gray-100 odd:bg-gray-300">
+              <td>AX12_1</td>
+              <td>222</td>
+              <td><label>
+                <input type="text"/>
+              </label></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="flex gap-4">
+          <label>
+            Nouvelle valeur :
+            <input type="range" min="0" max="1023" value="0" class="slider" />
+            <button class="btn">Modifier</button>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="tab" id="R2" data-active="inactive">
+    <h1>R2</h1>
+  </section>
+  <section class="tab" id="R1-asserv" data-active="inactive">
+    <h1>R1-asserv</h1>
+  </section>
+  <section class="tab" id="R2-asserv" data-active="inactive">
+    <h1>R2-asserv</h1>
+  </section>
+  <section class="tab" id="balise" data-active="inactive">
+    <h1>balise</h1>
+  </section>
+</main>
 </body>
 <script src="index.js"></script>
 </html>
