@@ -1,16 +1,32 @@
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+:root {
+    --couleur-equipe: green;
+    --couleur-adv: blue;
 }
 
 header {
+    height: 100%;
+    flex: 0 1 80px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: 1px solid black;
 }
 
 .tab-select {
-    height: 100px;
+    height: 100%;
     background-color: white;
+    border-right: 1px solid black;
 }
 
 .tab-select[data-active="active"] {
@@ -18,11 +34,14 @@ header {
 }
 
 main {
+    flex: 1 1 auto;
     position: relative;
 }
 
 .tab {
     position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 .tab[data-active="inactive"] {
@@ -32,4 +51,103 @@ main {
 h1 {
     margin: 0;
     padding: 0;
+}
+
+.synthese-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#plateau {
+    position: relative;
+    margin: 1rem;
+    width: 50vw;
+    aspect-ratio: 3/2;
+    border: 2px solid black;
+}
+
+.robot {
+    box-sizing: border-box;
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    background-color: var(--couleur-equipe);
+    color: white;
+    text-align: center;
+    padding: 1.2vw;
+    font-size: 1.5vw;
+}
+
+.robot::after {
+    display: block;
+    position: absolute;
+    left: 65%;
+    top: 45%;
+    content: "";
+    width: 50%;
+    height: 10%;
+    background-color: red;
+}
+
+.adv {
+    background-color: var(--couleur-adv);
+}
+
+.depart {
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    opacity: 50%;
+}
+
+.depart:nth-child(even) {
+    background-color: var(--couleur-adv);
+}
+
+.depart:nth-child(odd) {
+    background-color: var(--couleur-equipe);
+}
+
+#synthese-info {
+    width: 30vw;
+    height: 33vw;
+    border: 1px solid black;
+    margin-right: 4rem;
+    display: flex;
+    flex-flow: column;
+}
+
+.positions {
+    height: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ligne-commande {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+#commande {
+    border: 1px solid black;
+    height: 5vh;
+    width: 20vw;
+    padding-left: 10px;
+}
+
+#conf-commande {
+    background-color: lightgray;
+    height: 5vh;
+    width: 5vw;
+    border: 1px solid black;
+    border-radius: 5px;
 }
