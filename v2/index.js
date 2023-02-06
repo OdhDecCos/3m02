@@ -5,7 +5,7 @@ function tab(event, tab) {
             tabs[i].dataset.active = "inactive"
         } else {
             tabs[i].dataset.active = "active"
-        } 
+        }
     }
 
     let buttons = document.getElementsByClassName("tab-select");
