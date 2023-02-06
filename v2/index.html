@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="main.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <style type="text/tailwindcss">
-      @layer components {
+    @layer components {
           .btn {
               @apply bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-600;
           }
@@ -18,107 +18,130 @@
 </head>
 
 <body>
-<header>
-  <button class="tab-select" data-active="active" onclick="tab(event, 'synthese')">Synthèse</button>
-  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1')">R1</button>
-  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2')">R2</button>
-  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1-asserv')">R1-asserv</button>
-  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2-asserv')">R2-asserv</button>
-  <button class="tab-select" data-active="inactive" onclick="tab(event, 'balise')">Balise</button>
-</header>
-<main>
-  <section class="tab" id="synthese" data-active="inactive">
-    <h1>Synthèse</h1>
-  </section>
-  <section class="tab" id="R1" data-active="active">
-    <div class="flex w-screen">
-      <div class="w-3/5 h-full p-5 bg-gray-700 flex flex-col gap-4">
-        <div class="flex gap-4">
-          <div class="w-1/2 flex flex-col rounded justify-center items-left p-2 bg-green-300 aspect-rectangle">
-            <p class="font-bold">X_R1_odo</p>
-            <p class="font-bold">Y_R1_odo</p>
-            <p class="font-bold">Theta</p>
-          </div>
-          <div class="w-1/2 flex flex-col p-2 bg-green-300 rounded justify-center items-center">
-            <p class="font-bold">Mode</p>
-            <p class="text-3xl font-bold ">Automatisme</p>
-          </div>
+  <header>
+    <button class="tab-select" data-active="active" onclick="tab(event, 'synthese')">Synthèse</button>
+    <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1')">R1</button>
+    <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2')">R2</button>
+    <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1-asserv')">R1-asserv</button>
+    <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2-asserv')">R2-asserv</button>
+    <button class="tab-select" data-active="inactive" onclick="tab(event, 'balise')">Balise</button>
+  </header>
+  <main>
+    <section class="tab" id="synthese" data-active="active">
+      <div class="synthese-container">
+        <div id="plateau">
+          <div class="depart" id="D1" style="left:0; top:calc(50% - 2.5vw);"></div>
+          <div class="depart" id="D2" style="left:calc(50% - 2.5vw); top:0;"></div>
+          <div class="depart" id="D3" style="left:calc(100% - 5vw); top:calc(50% - 2.5vw);"></div>
+          <div class="depart" id="D4" style="left:calc(50% - 2.5vw); top:calc(100% - 5vw);"></div>
+
+          <div class="robot" id="R1" style="left: calc(50% - 2.5vw);top: calc(10% - 2.5vw);transform: rotate(45deg);">R1</div>
+          <div class="robot" id="R2" style="left: calc(30% - 2.5vw);top: calc(30% - 2.5vw);transform: rotate(-45deg);">R2</div>
+          <div class="robot adv" id="R1-adv" style="left: calc(60% - 2.5vw);top: calc(80% - 2.5vw);transform: rotate(90deg);">R3</div>
+          <div class="robot adv" id="R2-adv" style="left:0;top:0;">R4</div>
         </div>
-        <p class="text-2xl font-bold underline underline-offset-8">Moteur</p>
-        <div class="flex flex-col gap-4">
-          <div class="flex">
-            <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
-              <span class="w-18">Direction</span>
-              <input class="px-6" type="text" name="moteur" id="moteur">
-              <button class="btn">Modifier</button>
-            </label>
+        <div id="synthese-info">
+          <div class="positions">
+            <p>R1: X Y theta</p>
+            <p>R2: X Y theta</p>
           </div>
-          <div class="flex">
-            <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
-              <span class="w-18">PWM</span>
-              <input class="px-6" type="text" name="PWM" id="PWM">
-              <button class="btn">Modifier</button>
-            </label>
-          </div>
-          <p class="text-2xl font-bold underline underline-offset-8">GPIO</p>
-          <div class="flex">
-            <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
-              <span class="w-18">GPIO1</span>
-              <input class="px-6" type="text" name="GPIO1" id="GPIO1">
-              <button class="btn">Modifier</button>
-            </label>
-          </div>
-          <div class="flex">
-            <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
-              <span class="w-18">GPIO2</span>
-              <input class="px-6" type="text" name="GPIO2" id="GPIO2">
-              <button class="btn">Modifier</button>
-            </label>
-          </div>
-          <div class="flex">
-            <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
-              <span class="w-18">GPIO3</span>
-              <input class="px-6" type="text" name="GPIO3" id="GPIO3">
-              <button class="btn">Modifier</button>
-            </label>
-          </div>
-          <div class="flex">
-            <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
-              <span class="w-18">GPIO4</span>
-              <input class="px-6" type="text" name="GPIO4" id="GPIO4">
-              <button class="btn">Modifier</button>
-            </label>
-          </div>
-          <div class="flex">
-            <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
-              <span class="w-18">GPIO5</span>
-              <input class="px-6" type="text" name="GPIO5" id="GPIO5">
-              <button class="btn">Modifier</button>
-            </label>
-          </div>
-          <div class="flex">
-            <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
-              <span class="w-18">GPIO6</span>
-              <input class="px-6" type="text" name="GPIO6" id="GPIO6">
-              <button class="btn">Modifier</button>
-            </label>
-          </div>
-          <div class="flex">
-            <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
-              <span class="w-18">GPIO7</span>
-              <input class="px-6" type="text" name="GPIO7" id="GPIO7">
-              <button class="btn">Modifier</button>
-            </label>
-          </div>
-          <div class="flex">
-            <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
-              <span class="w-18">GPIO8</span>
-              <input class="px-6" type="text" name="GPIO8" id="GPIO8">
-              <button class="btn">Modifier</button>
-            </label>
+          <div class="ligne-commande">
+            <input type="text" name="commande" id="commande" placeholder="Commande">
+            <button id="conf-commande">Envoyer</button>
           </div>
         </div>
       </div>
+
+    </section>
+    <section class="tab" id="R1" data-active="inactive">
+      <div class="flex w-screen">
+        <div class="w-3/5 h-full p-5 bg-gray-700 flex flex-col gap-4">
+          <div class="flex gap-4">
+            <div class="w-1/2 flex flex-col rounded justify-center items-left p-2 bg-green-300 aspect-rectangle">
+              <p class="font-bold">X_R1_odo</p>
+              <p class="font-bold">Y_R1_odo</p>
+              <p class="font-bold">Theta</p>
+            </div>
+            <div class="w-1/2 flex flex-col p-2 bg-green-300 rounded justify-center items-center">
+              <p class="font-bold">Mode</p>
+              <p class="text-3xl font-bold ">Automatisme</p>
+            </div>
+          </div>
+          <p class="text-2xl font-bold underline underline-offset-8">Moteur</p>
+          <div class="flex flex-col gap-4">
+            <div class="flex">
+              <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
+                <span class="w-18">Direction</span>
+                <input class="px-6" type="text" name="moteur" id="moteur">
+                <button class="btn">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
+                <span class="w-18">PWM</span>
+                <input class="px-6" type="text" name="PWM" id="PWM">
+                <button class="btn">Modifier</button>
+              </label>
+            </div>
+            <p class="text-2xl font-bold underline underline-offset-8">GPIO</p>
+            <div class="flex">
+              <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
+                <span class="w-18">GPIO1</span>
+                <input class="px-6" type="text" name="GPIO1" id="GPIO1">
+                <button class="btn">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
+                <span class="w-18">GPIO2</span>
+                <input class="px-6" type="text" name="GPIO2" id="GPIO2">
+                <button class="btn">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
+                <span class="w-18">GPIO3</span>
+                <input class="px-6" type="text" name="GPIO3" id="GPIO3">
+                <button class="btn">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
+                <span class="w-18">GPIO4</span>
+                <input class="px-6" type="text" name="GPIO4" id="GPIO4">
+                <button class="btn">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
+                <span class="w-18">GPIO5</span>
+                <input class="px-6" type="text" name="GPIO5" id="GPIO5">
+                <button class="btn">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
+                <span class="w-18">GPIO6</span>
+                <input class="px-6" type="text" name="GPIO6" id="GPIO6">
+                <button class="btn">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
+                <span class="w-18">GPIO7</span>
+                <input class="px-6" type="text" name="GPIO7" id="GPIO7">
+                <button class="btn">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="bg-green-200 rounded flex gap-6 p-3 items-center">
+                <span class="w-18">GPIO8</span>
+                <input class="px-6" type="text" name="GPIO8" id="GPIO8">
+                <button class="btn">Modifier</button>
+              </label>
+            </div>
+          </div>
+        </div>
       <div class="w-2/5 p-5 bg-gray-900 flex flex-col gap-5">
         <table class="table-auto w-full text-center border-separate border-spacing-3">
           <thead class="bg-green-400 text-black">
@@ -223,6 +246,7 @@
           </label>
         </div>
       </div>
+      </div>
     </div>
   </section>
   <section class="tab" id="R2" data-active="inactive">
@@ -239,4 +263,5 @@
 </main>
 </body>
 <script src="index.js"></script>
+
 </html>
