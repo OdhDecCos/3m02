@@ -76,73 +76,97 @@
   </section>
   <section class="tab" id="R1" data-active="inactive">
     <div class="flex w-screen">
-      <div class="w-3/5 h-full p-5 bg-gray-700 flex flex-col gap-4">
+      <div class="w-1/2 h-full p-5 bg-gray-700 flex flex-col gap-4">
         <div class="flex gap-4">
           <div class="w-1/2 flex flex-col rounded justify-center items-left p-2 bg-green-300 aspect-rectangle">
-            <p class="font-bold text-3xl">X_R1_odo - 20</p>
-            <p class="font-bold text-3xl">Y_R1_odo - 12</p>
-            <p class="font-bold text-3xl">Theta - 50</p>
-            <p class="font-bold text-3xl">Vitesse - 100</p>
+            <p class="my-2 font-bold text-2xl">X_R1_odo </p>
+            <p class="my-2 font-bold text-2xl">Y_R1_odo </p>
+            <p class="my-2 font-bold text-2xl">Theta    </p>
+            <p class="my-2 font-bold text-2xl">Vitesse  </p>
           </div>
         </div>
         <p class="title">GPIO</p>
         <div class="flex w-full gap-4">
-          <div class="flex flex-col gap-4 w-1/2">
+          <div class="flex flex-col gap-3 w-1/2">
             <div class="flex">
               <label class="input-box">
                 <span class="w-16">GPIO1</span>
-                <input type="text" name="GPIO1" id="GPIO1">
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12">44</p>
+                  <input type="text" name="GPIO1" id="GPIO1" placeholder="Nouvelle valeur">
+                </div>
                 <button class="btn">Modifier</button>
               </label>
             </div>
             <div class="flex">
               <label class="input-box">
                 <span class="w-16">GPIO2</span>
-                <input type="text" name="GPIO2" id="GPIO2">
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12">44</p>
+                  <input type="text" name="GPIO2" id="GPIO2" placeholder="Nouvelle valeur">
+                </div>
                 <button class="btn">Modifier</button>
               </label>
             </div>
             <div class="flex">
               <label class="input-box">
                 <span class="w-16">GPIO3</span>
-                <input type="text" name="GPIO3" id="GPIO3">
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12">0</p>
+                  <input type="text" name="GPIO3" id="GPIO3" placeholder="Nouvelle valeur">
+                </div>
                 <button class="btn">Modifier</button>
               </label>
             </div>
             <div class="flex">
               <label class="input-box">
                 <span class="w-16">GPIO4</span>
-                <input type="text" name="GPIO4" id="GPIO4">
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12">44</p>
+                  <input type="text" name="GPIO4" id="GPIO4" placeholder="Nouvelle valeur">
+                </div>
                 <button class="btn">Modifier</button>
               </label>
             </div>
           </div>
-          <div class="flex flex-col gap-4 w-1/2">
+          <div class="flex flex-col gap-3 w-1/2">
             <div class="flex">
               <label class="input-box">
                 <span class="w-16">GPIO5</span>
-                <input type="text" name="GPIO5" id="GPIO5">
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12">44</p>
+                  <input type="text" name="GPIO5" id="GPIO5" placeholder="Nouvelle valeur">
+                </div>
                 <button class="btn">Modifier</button>
               </label>
             </div>
             <div class="flex">
               <label class="input-box">
                 <span class="w-16">GPIO6</span>
-                <input type="text" name="GPIO6" id="GPIO6">
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12">44</p>
+                  <input type="text" name="GPIO6" id="GPIO6" placeholder="Nouvelle valeur">
+                </div>
                 <button class="btn">Modifier</button>
               </label>
             </div>
             <div class="flex">
               <label class="input-box">
                 <span class="w-16">GPIO7</span>
-                <input type="text" name="GPIO7" id="GPIO7">
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12">44</p>
+                  <input type="text" name="GPIO7" id="GPIO7" placeholder="Nouvelle valeur">
+                </div>
                 <button class="btn">Modifier</button>
               </label>
             </div>
             <div class="flex">
               <label class="input-box">
                 <span class="w-16">GPIO8</span>
-                <input type="text" name="GPIO8" id="GPIO8">
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12">44</p>
+                  <input type="text" name="GPIO8" id="GPIO8" placeholder="Nouvelle valeur">
+                </div>
                 <button class="btn">Modifier</button>
               </label>
             </div>
@@ -156,7 +180,7 @@
               <div class="flex input-box">
                 <label for="moteur-input" class="w-16">Direction</label>
                 <div class="flex gap-4">
-                  <p class="bg-white rounded p-2">44</p>
+                  <p class="bg-white rounded p-2 w-12">44</p>
                   <input type="text" name="moteur" id="moteur-input" placeholder="Nouvelle valeur">
                 </div>
                 <button class="btn">Modifier</button>
@@ -164,7 +188,7 @@
               <div class="flex input-box">
                 <label for="pwm-input" class="w-16">PWM</label>
                 <div class="flex gap-4">
-                  <p class="bg-white rounded p-2">44</p>
+                  <p class="bg-white rounded p-2 w-12">44</p>
                   <input type="text" name="pwm" id="pwm-input" placeholder="Nouvelle valeur">
                 </div>
                 <button class="btn">Modifier</button>
@@ -177,7 +201,7 @@
               <div class="flex input-box">
                 <label for="moteur2-input" class="w-16">Direction</label>
                 <div class="flex gap-4">
-                  <p class="bg-white rounded p-2">44</p>
+                  <p class="bg-white rounded p-2 w-12">44</p>
                   <input type="text" name="moteur" id="moteur2-input" placeholder="Nouvelle valeur">
                 </div>
                 <button class="btn">Modifier</button>
@@ -185,7 +209,7 @@
               <div class="flex input-box">
                 <label for="pwm2-input" class="w-16">PWM</label>
                 <div class="flex gap-4">
-                  <p class="bg-white rounded p-2">44</p>
+                  <p class="bg-white rounded p-2 w-12">44</p>
                   <input type="text" name="pwm" id="pwm2-input" placeholder="Nouvelle valeur">
                 </div>
                 <button class="btn">Modifier</button>
@@ -194,7 +218,7 @@
           </div>
         </div>
       </div>
-      <div class="w-2/5 p-5 bg-gray-900 flex flex-col gap-5">
+      <div class="w-1/2 p-5 bg-gray-900 flex flex-col gap-5">
         <form>
           <table class="table-auto w-full text-center border-separate border-spacing-3 ax-table">
             <thead class="bg-green-400 text-black">
