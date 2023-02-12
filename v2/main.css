@@ -13,14 +13,16 @@ body {
 :root {
     --couleur-equipe: green;
     --couleur-adv: blue;
+    --couleur-fond: rgb(17 24 39);
+    --couleur-bordure: white;
 }
 
 header {
     height: 100%;
-    flex: 0 1 80px;
+    flex: 0 1 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--couleur-bordure);
 }
 
 .tab-select {
@@ -42,6 +44,7 @@ main {
     position: absolute;
     height: 100%;
     width: 100%;
+    background-color: var(--couleur-fond);
 }
 
 .tab[data-active="inactive"] {
@@ -64,9 +67,10 @@ h1 {
 #plateau {
     position: relative;
     margin: 1rem;
+    margin-left: 4rem;
     width: 50vw;
     aspect-ratio: 3/2;
-    border: 2px solid black;
+    border: 2px solid var(--couleur-bordure);
 }
 
 .robot {
@@ -74,7 +78,6 @@ h1 {
     position: absolute;
     height: 5vw;
     width: 5vw;
-    border-radius: 50%;
     background-color: var(--couleur-equipe);
     color: white;
     text-align: center;
@@ -85,10 +88,10 @@ h1 {
 .robot::after {
     display: block;
     position: absolute;
-    left: 65%;
+    left: 80%;
     top: 45%;
     content: "";
-    width: 50%;
+    width: 40%;
     height: 10%;
     background-color: red;
 }
@@ -112,21 +115,56 @@ h1 {
     background-color: var(--couleur-equipe);
 }
 
-#synthese-info {
+#container-synthese-info {
     width: 30vw;
     height: 33vw;
-    border: 1px solid black;
+    border: 2px solid var(--couleur-bordure);
+    border-radius: 0.5rem;
     margin-right: 4rem;
     display: flex;
     flex-flow: column;
 }
 
-.positions {
+.infos {
+    width: 100%;
     height: 50%;
+    border-bottom: 1px solid var(--couleur-bordure);
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.positions, .strat {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    border-right: 1px solid var(--couleur-bordure);
     flex-flow: column;
     align-items: center;
     justify-content: center;
+}
+
+#container-synthese-info p {
+    position: relative;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+}
+
+#container-synthese-info p[data-active="active"]::before {
+    background-color: lime;
+}
+
+.strat > p::before {
+    position: absolute;
+    top: 0.5vw;
+    left: -2vw;
+    content: "";
+    width: 1.5vw;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 50%;
+    background-color: none;
 }
 
 .ligne-commande {
@@ -138,7 +176,7 @@ h1 {
 }
 
 #commande {
-    border: 1px solid black;
+    border: 1px solid var(--couleur-bordure);
     height: 5vh;
     width: 20vw;
     padding-left: 10px;
@@ -148,6 +186,6 @@ h1 {
     background-color: lightgray;
     height: 5vh;
     width: 5vw;
-    border: 1px solid black;
+    border: 1px solid var(--couleur-bordure);
     border-radius: 5px;
 }
