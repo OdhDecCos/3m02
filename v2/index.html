@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="main.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <style type="text/tailwindcss">
-      @layer components {
+    @layer components {
           .btn {
               @apply bg-green-600 text-white font-bold py-2 px-4 rounded hover:bg-green-700;
           }
@@ -34,44 +34,44 @@
 </head>
 
 <body>
-<header>
-  <button class="tab-select" data-active="active" onclick="tab(event, 'synthese')">Synthèse</button>
-  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1')">R1</button>
-  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2')">R2</button>
-  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1-asserv')">R1-asserv</button>
-  <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2-asserv')">R2-asserv</button>
-  <button class="tab-select" data-active="inactive" onclick="tab(event, 'balise')">Balise</button>
-</header>
-<main>
-  <section class="tab" id="synthese" data-active="active">
-    <div class="synthese-container">
-      <div id="plateau">
-        <div class="depart" id="D1" style="left:0; top:calc(50% - 2.5vw);"></div>
-        <div class="depart" id="D2" style="left:calc(50% - 2.5vw); top:0;"></div>
-        <div class="depart" id="D3" style="left:calc(100% - 5vw); top:calc(50% - 2.5vw);"></div>
-        <div class="depart" id="D4" style="left:calc(50% - 2.5vw); top:calc(100% - 5vw);"></div>
-
-        <div class="robot" id="R1" style="left: calc(50% - 2.5vw);top: calc(10% - 2.5vw);transform: rotate(45deg);">R1
+  <header>
+    <button class="tab-select" data-active="active" onclick="tab(event, 'synthese')">Synthèse</button>
+    <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1')">R1</button>
+    <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2')">R2</button>
+    <button class="tab-select" data-active="inactive" onclick="tab(event, 'R1-asserv')">R1-asserv</button>
+    <button class="tab-select" data-active="inactive" onclick="tab(event, 'R2-asserv')">R2-asserv</button>
+    <button class="tab-select" data-active="inactive" onclick="tab(event, 'balise')">Balise</button>
+  </header>
+  <main>
+    <section class="tab" id="synthese" data-active="active">
+      <div class="synthese-container">
+        <div id="plateau">
+          <div class="depart" id="D1" style="left:0; top:calc(50% - 2.5vw);"></div>
+          <div class="depart" id="D2" style="left:calc(50% - 2.5vw); top:0;"></div>
+          <div class="depart" id="D3" style="left:calc(100% - 5vw); top:calc(50% - 2.5vw);"></div>
+          <div class="depart" id="D4" style="left:calc(50% - 2.5vw); top:calc(100% - 5vw);"></div>
+          <div class="robot" id="robot-R1" style="left: calc(50% - 2.5vw);top: calc(10% - 2.5vw);transform: rotate(45deg);">R1</div>
+          <div class="robot" id="robot-R2" style="left: calc(30% - 2.5vw);top: calc(30% - 2.5vw);transform: rotate(-45deg);">R2</div>
+          <div class="robot adv" id="robot-R1-adv" style="left: calc(60% - 2.5vw);top: calc(80% - 2.5vw);transform: rotate(90deg);">R3</div>
+          <div class="robot adv" id="robot-R2-adv" style="left:0;top:0;">R4</div>
         </div>
-        <div class="robot" id="R2" style="left: calc(30% - 2.5vw);top: calc(30% - 2.5vw);transform: rotate(-45deg);">
-          R2
+        <div id="container-synthese-info">
+          <div class="infos">
+            <div class="positions">
+              <p>R1: X Y theta</p>
+              <p>R2: X Y theta</p>
+            </div>
+            <div class="strat">
+              <p data-active="active">Evitement</p>
+              <p data-active="inactive">Bloqué</p>
+            </div>
+          </div>
+          <div class="ligne-commande">
+            <input type="text" name="commande" id="commande" placeholder="Commande">
+            <button id="conf-commande">Envoyer</button>
+          </div>
         </div>
-        <div class="robot adv" id="R1-adv"
-             style="left: calc(60% - 2.5vw);top: calc(80% - 2.5vw);transform: rotate(90deg);">R3
-        </div>
-        <div class="robot adv" id="R2-adv" style="left:0;top:0;">R4</div>
       </div>
-      <div id="synthese-info">
-        <div class="positions">
-          <p>R1: X Y theta</p>
-          <p>R2: X Y theta</p>
-        </div>
-        <div class="ligne-commande">
-          <input type="text" name="commande" id="commande" placeholder="Commande">
-          <button id="conf-commande">Envoyer</button>
-        </div>
-      </div>
-    </div>
 
   </section>
   <section class="tab" id="R1" data-active="inactive">
@@ -169,7 +169,6 @@
                 <button class="btn">Modifier</button>
               </label>
             </div>
-          </div>
 
         </div>
         <div class="flex gap-4">
@@ -190,7 +189,6 @@
                   <p class="bg-white rounded p-2 w-12">44</p>
                   <input type="text" name="pwm" id="pwm-input" placeholder="Nouvelle valeur">
                 </div>
-                <button class="btn">Modifier</button>
               </div>
             </div>
           </div>
@@ -211,7 +209,6 @@
                   <p class="bg-white rounded p-2 w-12">44</p>
                   <input type="text" name="pwm" id="pwm2-input" placeholder="Nouvelle valeur">
                 </div>
-                <button class="btn">Modifier</button>
               </div>
             </div>
           </div>
@@ -332,24 +329,22 @@
               <p class="font-bold">Mode</p>
               <p class="text-3xl font-bold ">Automatisme</p>
             </div>
-            <button type="submit" class="btn">Modifier</button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="tab" id="R2" data-active="inactive">
-  </section>
-  <section class="tab" id="R1-asserv" data-active="inactive">
-    <h1>R1-asserv</h1>
-  </section>
-  <section class="tab" id="R2-asserv" data-active="inactive">
-    <h1>R2-asserv</h1>
-  </section>
-  <section class="tab" id="balise" data-active="inactive">
-    <h1>balise</h1>
-  </section>
-</main>
+    </section>
+    <section class="tab" id="R2" data-active="inactive">
+    </section>
+    <section class="tab" id="R1-asserv" data-active="inactive">
+      <h1>R1-asserv</h1>
+    </section>
+    <section class="tab" id="R2-asserv" data-active="inactive">
+      <h1>R2-asserv</h1>
+    </section>
+    <section class="tab" id="balise" data-active="inactive">
+      <h1>balise</h1>
+    </section>
+  </main>
 </body>
 <script src="index.js"></script>
 
