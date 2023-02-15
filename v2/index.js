@@ -15,3 +15,9 @@ function tab(event, tab) {
 
     event.currentTarget.dataset.active = "active";
 }
+
+function fonction1() {
+  var R1_pos_odom_X = document.getElementById("R1_pos_odom_X_newvalue").value;
+  console.log(R1_pos_odom_X);
+  document.getElementById("R1_pos_odom_X").innerHTML = R1_pos_odom_X;
+}
