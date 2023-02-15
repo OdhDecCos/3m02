@@ -32,7 +32,7 @@ header {
 }
 
 .tab-select[data-active="active"] {
-    background-color: lightgray;
+    background-color: darkgray;
 }
 
 main {
