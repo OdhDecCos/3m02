@@ -397,21 +397,330 @@
           </div>
           </div>
           <div class="grid grid-cols-3 gap-4 mt-3">
-            <button class="btn" type="button" onclick="automatisme1()">Automatisme 1</button>
-            <button class="btn" type="button" onclick="automatisme2()">Automatisme 2</button>
-            <button class="btn" type="button" onclick="automatisme3()">Automatisme 3</button>
-            <button class="btn" type="button" onclick="automatisme4()">Automatisme 4</button>
-            <button class="btn" type="button" onclick="automatisme5()">Automatisme 5</button>
-            <button class="btn" type="button" onclick="automatisme6()">Automatisme 6</button>
-            <button class="btn" type="button" onclick="automatisme7()">Automatisme 7</button>
-            <button class="btn" type="button" onclick="automatisme8()">Automatisme 8</button>
-            <button class="btn" type="button" onclick="automatisme9()">Automatisme 9</button>
+            <button class="btn" type="button" onclick="R1_automatisme1()">Automatisme 1</button>
+            <button class="btn" type="button" onclick="R1_automatisme2()">Automatisme 2</button>
+            <button class="btn" type="button" onclick="R1_automatisme3()">Automatisme 3</button>
+            <button class="btn" type="button" onclick="R1_automatisme4()">Automatisme 4</button>
+            <button class="btn" type="button" onclick="R1_automatisme5()">Automatisme 5</button>
+            <button class="btn" type="button" onclick="R1_automatisme6()">Automatisme 6</button>
+            <button class="btn" type="button" onclick="R1_automatisme7()">Automatisme 7</button>
+            <button class="btn" type="button" onclick="R1_automatisme8()">Automatisme 8</button>
+            <button class="btn" type="button" onclick="R1_automatisme9()">Automatisme 9</button>
           </div>
         </form>
       </div>
     </div>
   </section>
   <section class="tab" id="R2" data-active="inactive">
+    <div class="flex w-screen">
+      <div class="w-1/2 h-full p-5 bg-gray-900 flex flex-col gap-4">
+        <div class="flex gap-4">
+          <div class="w-4/5 flex flex-col justify-center items-left card">
+            <table class="table coord-table">
+              <tbody>
+                <tr>
+                  <td class="font-bold text-2xl">X_R1_odo</td>
+                  <td class="font-bold text-4xl text-center" name="R2_pos_odom_X" id="R2_pos_odom_X">1</td>
+                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_pos_odom_X_newvalue" id="R2_pos_odom_X_newvalue"></td>
+                  <td class="text-center"><button onclick="fonction1()" class="btn py-1 px-2" type="button">Modifier</button></td>
+                </tr>
+                <tr>
+                  <td class="font-bold text-2xl">Y_R1_odo</td>
+                  <td class="font-bold text-4xl text-center" name="R2_pos_odom_Y" id="R2_pos_odom_Y">2</td>
+                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_pos_odom_Y_newvalue" id="R2_pos_odom_Y_newvalue"></td>
+                  <td class="text-center"><button onclick="fonction2()" class="btn py-1 px-2" type="button">Modifier</button></td>
+                </tr>
+                <tr>
+                  <td class="font-bold text-2xl">Theta</td>
+                  <td class="font-bold text-4xl text-center" name="R2_pos_odom_Theta" id="R2_pos_odom_Theta">3</td>
+                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_pos_odom_Theta_newvalue" id="R2_pos_odom_Theta_newvalue"></td>
+                  <td class="text-center"><button onclick="fonction3()" class="btn py-1 px-2" type="button">Modifier</button></td>
+                </tr>
+                <tr>
+                  <td class="font-bold text-2xl">Vitesse</td>
+                  <td class="font-bold text-4xl text-center" name="R2_vitesse" id="R2_vitesse">4</td>
+                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_vitesse_newvalue" id="R2_vitesse_newvalue"></td>
+                  <td class="text-center"><button onclick="fonction4()" class="btn py-1 px-2" type="button">Modifier</button></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div class="w-1/5 card flex flex-col justify-center items-center gap-2">
+            <p class="font-bold text-2xl">Évitement</p>
+            <div class="flex gap-2">
+              <span class="font-bold text-xl">OFF</span>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div
+                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[3px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              </label>
+              <span class="font-bold text-xl">ON</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex w-full gap-4">
+          <div class="flex flex-col gap-2 w-1/2">
+            <div class="flex">
+              <label class="input-box">
+                <span class="w-16 font-bold">GPIO1</span>
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12" name="R2_GPIO1" id="R2_GPIO1">44</p>
+                  <input type="text" name="R2_GPIO1_newvalue" id="R2_GPIO1_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction5()" type="button">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="input-box">
+                <span class="w-16 font-bold">GPIO2</span>
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12" name="R2_GPIO2" id="R2_GPIO2">44</p>
+                  <input type="text" name="R2_GPIO2_newvalue" id="R2_GPIO2_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction6()" type="button">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="input-box">
+                <span class="w-16 font-bold">GPIO3</span>
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12" name="R2_GPIO3" id="R2_GPIO3">44</p>
+                  <input type="text" name="R2_GPIO3_newvalue" id="R2_GPIO3_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction7()" type="button">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="input-box">
+                <span class="w-16 font-bold">GPIO4</span>
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12" name="R2_GPIO4" id="R2_GPIO4">44</p>
+                  <input type="text" name="R2_GPIO4_newvalue" id="R2_GPIO4_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction8()" type="button">Modifier</button>
+              </label>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 w-1/2">
+            <div class="flex">
+              <label class="input-box">
+                <span class="w-16 font-bold">GPIO5</span>
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12" name="R2_GPIO5" id="R2_GPIO5">44</p>
+                  <input type="text" name="R2_GPIO5_newvalue" id="R2_GPIO5_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction9()" type="button">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="input-box">
+                <span class="w-16 font-bold">GPIO6</span>
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12" name="R2_GPIO6" id="R2_GPIO6">44</p>
+                  <input type="text" name="R2_GPIO6_newvalue" id="R2_GPIO6_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction10()" type="button">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="input-box">
+                <span class="w-16 font-bold">GPIO7</span>
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12" name="R2_GPIO7" id="R2_GPIO7">44</p>
+                  <input type="text" name="R2_GPIO7_newvalue" id="R2_GPIO7_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction11()" type="button">Modifier</button>
+              </label>
+            </div>
+            <div class="flex">
+              <label class="input-box">
+                <span class="w-16 font-bold">GPIO8</span>
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12" name="R2_GPIO8" id="R2_GPIO8">44</p>
+                  <input type="text" name="R2_GPIO8_newvalue" id="R2_GPIO8_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction12()" type="button">Modifier</button>
+              </label>
+            </div>
+          </div>
+
+        </div>
+        <div class="flex gap-4 mt-1">
+          <div class="flex flex-col w-1/2">
+            <p class="title">Moteur 1</p>
+            <div class="flex flex-col gap-2">
+              <div class="flex input-box">
+                <label for="moteur-input" class="w-16 font-bold">Direction</label>
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12" name="R2_moteur1_dir" id="R2_moteur1_dir">44</p>
+                  <input type="text" name="R2_moteur1_dir_newvalue" id="R2_moteur1_dir_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction13()" type="button">Modifier</button>
+              </div>
+              <div class="flex input-box">
+                <label for="pwm-input" class="w-16 font-bold">PWM</label>
+                <div class="flex gap-4 ml-5">
+                  <p class="bg-white rounded p-2 w-12" name="R2_moteur1_pwm" id="R2_moteur1_pwm">44</p>
+                  <input type="text" name="R2_moteur1_pwm_newvalue" id="R2_moteur1_pwm_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction14()" type="button">Modifier</button>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-1/2">
+            <p class="title text-white">Moteur 2</p>
+            <div class="flex flex-col gap-2">
+              <div class="flex input-box">
+                <label for="moteur2-input" class="w-16 font-bold">Direction</label>
+                <div class="flex gap-4">
+                  <p class="bg-white rounded p-2 w-12" name="R2_moteur2_dir" id="R2_moteur2_dir">44</p>
+                  <input type="text" name="R2_moteur2_dir_newvalue" id="R2_moteur2_dir_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction15()" type="button">Modifier</button>
+              </div>
+              <div class="flex input-box">
+                <label for="pwm2-input" class="w-16 font-bold">PWM</label>
+                <div class="flex gap-4 ml-5">
+                  <p class="bg-white rounded p-2 w-12" name="R2_moteur2_pwm" id="R2_moteur2_pwm">44</p>
+                  <input type="text" name="R2_moteur2_pwm_newvalue" id="R2_moteur2_pwm_newvalue" placeholder="New value">
+                </div>
+                <button class="btn" onclick="fonction16()" type="button">Modifier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-1/2 p-5 bg-gray-700 flex flex-col gap-5">
+        <form>
+          <div class="flex gap-4">
+            <table class="table-auto w-full text-center border-separate border-spacing-3 ax-table">
+              <thead class="bg-green-400 text-black">
+              <tr>
+                <th>Ax12</th>
+                <th>Vitesse</th>
+                <th>Position</th>
+                <th>Nouvelle position</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_1</td>
+                <td name="R2_vit_ax12_1" id="R2_vit_ax12_1">111</td>
+                <td name="R2_pos_ax12_1" id="R2_pos_ax12_1">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_1_newvalue" id="R2_pos_ax12_1_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_2</td>
+                <td name="R2_vit_ax12_2" id="R2_vit_ax12_2">111</td>
+                <td name="R2_pos_ax12_2" id="R2_pos_ax12_2">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_2_newvalue" id="R2_pos_ax12_2_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_3</td>
+                <td name="R2_vit_ax12_3" id="R2_vit_ax12_3">111</td>
+                <td name="R2_pos_ax12_3" id="R2_pos_ax12_3">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_3_newvalue" id="R2_pos_ax12_3_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_4</td>
+                <td name="R2_vit_ax12_4" id="R2_vit_ax12_4">111</td>
+                <td name="R2_pos_ax12_4" id="R2_pos_ax12_4">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_4_newvalue" id="R2_pos_ax12_4_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_5</td>
+                <td name="R2_vit_ax12_5" id="R2_vit_ax12_5">111</td>
+                <td name="R2_pos_ax12_5" id="R2_pos_ax12_5">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_5_newvalue" id="R2_pos_ax12_5_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_6</td>
+                <td name="R2_vit_ax12_6" id="R2_vit_ax12_6">111</td>
+                <td name="R2_pos_ax12_6" id="R2_pos_ax12_6">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_6_newvalue" id="R2_pos_ax12_6_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_7</td>
+                <td name="R2_vit_ax12_7" id="R2_vit_ax12_7">111</td>
+                <td name="R2_pos_ax12_7" id="R2_pos_ax12_7">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_7_newvalue" id="R2_pos_ax12_7_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_8</td>
+                <td name="R2_vit_ax12_8" id="R2_vit_ax12_8">111</td>
+                <td name="R2_pos_ax12_8" id="R2_pos_ax12_8">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_8_newvalue" id="R2_pos_ax12_8_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_9</td>
+                <td name="R2_vit_ax12_9" id="R2_vit_ax12_9">111</td>
+                <td name="R2_pos_ax12_9" id="R2_pos_ax12_9">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_9_newvalue" id="R2_pos_ax12_9_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_10</td>
+                <td name="R2_vit_ax12_10" id="R2_vit_ax12_10">111</td>
+                <td name="R2_pos_ax12_10" id="R2_pos_ax12_10">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_10_newvalue" id="R2_pos_ax12_10_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_11</td>
+                <td name="R2_vit_ax12_11" id="R2_vit_ax12_11">111</td>
+                <td name="R2_pos_ax12_11" id="R2_pos_ax12_11">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_11_newvalue" id="R2_pos_ax12_11_newvalue"/>
+                </label></td>
+              </tr>
+              <tr class="even:bg-gray-100 odd:bg-gray-300">
+                <td>AX12_12</td>
+                <td name="R2_vit_ax12_12" id="R2_vit_ax12_12">111</td>
+                <td name="R2_pos_ax12_12" id="R2_pos_ax12_12">222</td>
+                <td><label>
+                  <input type="text" name="R2_pos_ax12_12_newvalue" id="R2_pos_ax12_12_newvalue"/>
+                </label></td>
+              </tr>
+              </tbody>
+            </table>
+            <div class="grid grid-rows-2 gap-4 self-end mb-3">
+            <button type="reset" class="btn">Clear</button>
+            <button type="button" class="btn" onclick="fonction17()">Modifier</button>
+          </div>
+          </div>
+          <div class="grid grid-cols-3 gap-4 mt-3">
+            <button class="btn" type="button" onclick="R2_automatisme1()">Automatisme 1</button>
+            <button class="btn" type="button" onclick="R2_automatisme2()">Automatisme 2</button>
+            <button class="btn" type="button" onclick="R2_automatisme3()">Automatisme 3</button>
+            <button class="btn" type="button" onclick="R2_automatisme4()">Automatisme 4</button>
+            <button class="btn" type="button" onclick="R2_automatisme5()">Automatisme 5</button>
+            <button class="btn" type="button" onclick="R2_automatisme6()">Automatisme 6</button>
+            <button class="btn" type="button" onclick="R2_automatisme7()">Automatisme 7</button>
+            <button class="btn" type="button" onclick="R2_automatisme8()">Automatisme 8</button>
+            <button class="btn" type="button" onclick="R2_automatisme9()">Automatisme 9</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
   <section class="tab" id="R1-asserv" data-active="inactive">
     <h1>R1-asserv</h1>
