@@ -412,7 +412,7 @@
               </tbody>
             </table>
             <div class="grid grid-rows-2 gap-4 self-end mb-3">
-              <button type="reset" class="btn">Clear</button>
+              <button type="reset" class="btn">Effacer</button>
               <button type="button" class="btn" onclick="fonction17()">Modifier</button>
             </div>
           </div>
@@ -739,7 +739,7 @@
               </tbody>
             </table>
             <div class="grid grid-rows-2 gap-4 self-end mb-3">
-              <button type="reset" class="btn">Clear</button>
+              <button type="reset" class="btn">Effacer</button>
               <button type="button" class="btn" onclick="fonction17()">Modifier</button>
             </div>
           </div>
@@ -952,29 +952,25 @@
         </div>
         <div class="w-full flex flex-row justify-between card">
           <a href="#" class="btn">Aide</a>
-          <a href="#" class="btn">Modifier</a>
-          <a href="#" class="btn">Valider</a>
+          <button class="btn" onclick="fonction()" type="button">Modifier</button>
+          <button class="btn" onclick="fonction()" type="button">valider</button>
         </div>
 
       </div>
       <div class="w-1/2 p-5 bg-gray-900 flex flex-col gap-4">
-        <div class="h-1/2 flex flex-col">
+        <div class="flex flex-col">
           <div class="rounded w-full flex justify-center bg-yellow-500">
             <p class="font-bold">courbe vitesse</p>
           </div>
-          <div class="h-full grid grid-cols-2 grid-rows-2 gap-3 mt-2">
-            <div class="card">courbe 1</div>
-            <div class="card">courbe 2</div>
-            <div class="card">courbe 3</div>
-            <div class="card">courbe 4</div>
-          </div>
         </div>
-        <div class="flex flex-col card">
+        <div class="h-1/2 flex flex-col card">
+        </div>
+        <div class="h-40 flex flex-col card">
           <div class="rounded w-full flex justify-center bg-yellow-500">
             <p class="font-bold">Déplacement</p>
           </div>
-          <div class="flex flex-row justify-center gap-2 p-2">
-            <input type="text" class="px-2" placeholder="Commande" value=""/>
+          <div class="flex flex-row justify-center gap-2 p-2 mt-16">
+            <input type="text" class="px-2 w-96" placeholder="Commande" value=""/>
             <button class="btn">Valider</button>
           </div>
         </div>
