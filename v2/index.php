@@ -66,6 +66,18 @@
     echo "Erreur de connection à la base de données.";
     exit();
   }
+  $php_data_array = array();
+
+    if ($result = $link->query("SELECT * FROM `test` ORDER BY `time` DESC LIMIT 5")) {
+        while ($row = $result->fetch_row()) {
+            $php_data_array[] = $row;
+        }
+        $result->close();
+    }
+
+    echo "<script>
+        var my_2d = " . json_encode($php_data_array) . "
+        </script>";
   ?>
   <header>
     <button class="tab-select" data-active="active" onclick="tab(event, 'synthese')">Synthèse</button>
@@ -963,8 +975,11 @@
         <div class="w-full flex flex-col justify-center card">
         </div>
         <div class="h-1/2 flex flex-col justify-center card">
-          <div class="rounded w-full flex justify-center bg-yellow-500">
-            <p class="font-bold">courbe vitesse</p>
+          <div class="rounded w-full flex flex-wrap justify-center bg-yellow-500">
+          <div id="chartR1"></div>
+          <div id="chartR2"></div>
+          <div id="chartR3"></div>
+          <div id="chartR4"></div>
           </div>
         </div>
         <div class="flex flex-col justify-center card">
@@ -987,6 +1002,7 @@
     </section>
   </main>
 </body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="index.js"></script>
 
 </html>
