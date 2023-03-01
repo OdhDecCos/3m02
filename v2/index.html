@@ -38,8 +38,8 @@
               @apply w-1/4 first:text-2xl first:font-bold;
           }
 
-          .parametre{
-            @apply p-1 flex gap-4 mt-1;
+          .parametre {
+              @apply p-1 flex gap-4 mt-1;
           }
       }
   </style>
@@ -111,30 +111,42 @@
           <div class="w-4/5 flex flex-col justify-center items-left card">
             <table class="table coord-table">
               <tbody>
-                <tr>
-                  <td class="font-bold text-2xl">X_R1_odo</td>
-                  <td class="font-bold text-4xl text-center" name="R1_pos_odom_X" id="R1_pos_odom_X">1</td>
-                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R1_pos_odom_X_newvalue" id="R1_pos_odom_X_newvalue"></td>
-                  <td class="text-center"><button onclick="fonction1()" class="btn py-1 px-2" type="button">Modifier</button></td>
-                </tr>
-                <tr>
-                  <td class="font-bold text-2xl">Y_R1_odo</td>
-                  <td class="font-bold text-4xl text-center" name="R1_pos_odom_Y" id="R1_pos_odom_Y">2</td>
-                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R1_pos_odom_Y_newvalue" id="R1_pos_odom_Y_newvalue"></td>
-                  <td class="text-center"><button onclick="fonction2()" class="btn py-1 px-2" type="button">Modifier</button></td>
-                </tr>
-                <tr>
-                  <td class="font-bold text-2xl">Theta</td>
-                  <td class="font-bold text-4xl text-center" name="R1_pos_odom_Theta" id="R1_pos_odom_Theta">3</td>
-                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R1_pos_odom_Theta_newvalue" id="R1_pos_odom_Theta_newvalue"></td>
-                  <td class="text-center"><button onclick="fonction3()" class="btn py-1 px-2" type="button">Modifier</button></td>
-                </tr>
-                <tr>
-                  <td class="font-bold text-2xl">Vitesse</td>
-                  <td class="font-bold text-4xl text-center" name="R1_vitesse" id="R1_vitesse">4</td>
-                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R1_vitesse_newvalue" id="R1_vitesse_newvalue"></td>
-                  <td class="text-center"><button onclick="fonction4()" class="btn py-1 px-2" type="button">Modifier</button></td>
-                </tr>
+              <tr>
+                <td class="font-bold text-2xl">X_R1_odo</td>
+                <td class="font-bold text-4xl text-center" name="R1_pos_odom_X" id="R1_pos_odom_X">1</td>
+                <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R1_pos_odom_X_newvalue"
+                           id="R1_pos_odom_X_newvalue"></td>
+                <td class="text-center">
+                  <button onclick="fct1()" class="btn py-1 px-2" type="button">Modifier</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="font-bold text-2xl">Y_R1_odo</td>
+                <td class="font-bold text-4xl text-center" name="R1_pos_odom_Y" id="R1_pos_odom_Y">2</td>
+                <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R1_pos_odom_Y_newvalue"
+                           id="R1_pos_odom_Y_newvalue"></td>
+                <td class="text-center">
+                  <button onclick="fct2()" class="btn py-1 px-2" type="button">Modifier</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="font-bold text-2xl">Theta</td>
+                <td class="font-bold text-4xl text-center" name="R1_pos_odom_Theta" id="R1_pos_odom_Theta">3</td>
+                <td><input type="text" class="h-8 w-full rounded" placeholder="New value"
+                           name="R1_pos_odom_Theta_newvalue" id="R1_pos_odom_Theta_newvalue"></td>
+                <td class="text-center">
+                  <button onclick="fct3()" class="btn py-1 px-2" type="button">Modifier</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="font-bold text-2xl">Vitesse</td>
+                <td class="font-bold text-4xl text-center" name="R1_vitesse" id="R1_vitesse">4</td>
+                <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R1_vitesse_newvalue"
+                           id="R1_vitesse_newvalue"></td>
+                <td class="text-center">
+                  <button onclick="fct4()" class="btn py-1 px-2" type="button">Modifier</button>
+                </td>
+              </tr>
               </tbody>
             </table>
 
@@ -161,7 +173,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R1_GPIO1" id="R1_GPIO1">44</p>
                   <input type="text" name="R1_GPIO1_newvalue" id="R1_GPIO1_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction5()" type="button">Modifier</button>
+                <button class="btn" onclick="fct5()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -171,7 +183,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R1_GPIO2" id="R1_GPIO2">44</p>
                   <input type="text" name="R1_GPIO2_newvalue" id="R1_GPIO2_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction6()" type="button">Modifier</button>
+                <button class="btn" onclick="fct6()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -181,7 +193,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R1_GPIO3" id="R1_GPIO3">44</p>
                   <input type="text" name="R1_GPIO3_newvalue" id="R1_GPIO3_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction7()" type="button">Modifier</button>
+                <button class="btn" onclick="fct7()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -191,7 +203,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R1_GPIO4" id="R1_GPIO4">44</p>
                   <input type="text" name="R1_GPIO4_newvalue" id="R1_GPIO4_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction8()" type="button">Modifier</button>
+                <button class="btn" onclick="fct8()" type="button">Modifier</button>
               </label>
             </div>
           </div>
@@ -203,7 +215,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R1_GPIO5" id="R1_GPIO5">44</p>
                   <input type="text" name="R1_GPIO5_newvalue" id="R1_GPIO5_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction9()" type="button">Modifier</button>
+                <button class="btn" onclick="fct9()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -213,7 +225,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R1_GPIO6" id="R1_GPIO6">44</p>
                   <input type="text" name="R1_GPIO6_newvalue" id="R1_GPIO6_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction10()" type="button">Modifier</button>
+                <button class="btn" onclick="fct10()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -223,7 +235,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R1_GPIO7" id="R1_GPIO7">44</p>
                   <input type="text" name="R1_GPIO7_newvalue" id="R1_GPIO7_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction11()" type="button">Modifier</button>
+                <button class="btn" onclick="fct11()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -233,7 +245,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R1_GPIO8" id="R1_GPIO8">44</p>
                   <input type="text" name="R1_GPIO8_newvalue" id="R1_GPIO8_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction12()" type="button">Modifier</button>
+                <button class="btn" onclick="fct12()" type="button">Modifier</button>
               </label>
             </div>
           </div>
@@ -247,17 +259,19 @@
                 <label for="moteur-input" class="w-16 font-bold">Direction</label>
                 <div class="flex gap-4">
                   <p class="bg-white rounded p-2 w-12" name="R1_moteur1_dir" id="R1_moteur1_dir">44</p>
-                  <input type="text" name="R1_moteur1_dir_newvalue" id="R1_moteur1_dir_newvalue" placeholder="New value">
+                  <input type="text" name="R1_moteur1_dir_newvalue" id="R1_moteur1_dir_newvalue"
+                         placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction13()" type="button">Modifier</button>
+                <button class="btn" onclick="fct13()" type="button">Modifier</button>
               </div>
               <div class="flex input-box">
                 <label for="pwm-input" class="w-16 font-bold">PWM</label>
                 <div class="flex gap-4 ml-5">
                   <p class="bg-white rounded p-2 w-12" name="R1_moteur1_pwm" id="R1_moteur1_pwm">44</p>
-                  <input type="text" name="R1_moteur1_pwm_newvalue" id="R1_moteur1_pwm_newvalue" placeholder="New value">
+                  <input type="text" name="R1_moteur1_pwm_newvalue" id="R1_moteur1_pwm_newvalue"
+                         placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction14()" type="button">Modifier</button>
+                <button class="btn" onclick="fct14()" type="button">Modifier</button>
               </div>
             </div>
           </div>
@@ -268,17 +282,19 @@
                 <label for="moteur2-input" class="w-16 font-bold">Direction</label>
                 <div class="flex gap-4">
                   <p class="bg-white rounded p-2 w-12" name="R1_moteur2_dir" id="R1_moteur2_dir">44</p>
-                  <input type="text" name="R1_moteur2_dir_newvalue" id="R1_moteur2_dir_newvalue" placeholder="New value">
+                  <input type="text" name="R1_moteur2_dir_newvalue" id="R1_moteur2_dir_newvalue"
+                         placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction15()" type="button">Modifier</button>
+                <button class="btn" onclick="fct15()" type="button">Modifier</button>
               </div>
               <div class="flex input-box">
                 <label for="pwm2-input" class="w-16 font-bold">PWM</label>
                 <div class="flex gap-4 ml-5">
                   <p class="bg-white rounded p-2 w-12" name="R1_moteur2_pwm" id="R1_moteur2_pwm">44</p>
-                  <input type="text" name="R1_moteur2_pwm_newvalue" id="R1_moteur2_pwm_newvalue" placeholder="New value">
+                  <input type="text" name="R1_moteur2_pwm_newvalue" id="R1_moteur2_pwm_newvalue"
+                         placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction16()" type="button">Modifier</button>
+                <button class="btn" onclick="fct16()" type="button">Modifier</button>
               </div>
             </div>
           </div>
@@ -396,9 +412,9 @@
               </tbody>
             </table>
             <div class="grid grid-rows-2 gap-4 self-end mb-3">
-            <button type="reset" class="btn">Clear</button>
-            <button type="button" class="btn" onclick="fonction17()">Modifier</button>
-          </div>
+              <button type="reset" class="btn">Effacer</button>
+              <button type="button" class="btn" onclick="fct17()">Modifier</button>
+            </div>
           </div>
           <div class="grid grid-cols-3 gap-4 mt-3">
             <button class="btn" type="button" onclick="R1_automatisme1()">Automatisme 1</button>
@@ -422,30 +438,42 @@
           <div class="w-4/5 flex flex-col justify-center items-left card">
             <table class="table coord-table">
               <tbody>
-                <tr>
-                  <td class="font-bold text-2xl">X_R2_odo</td>
-                  <td class="font-bold text-4xl text-center" name="R2_pos_odom_X" id="R2_pos_odom_X">1</td>
-                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_pos_odom_X_newvalue" id="R2_pos_odom_X_newvalue"></td>
-                  <td class="text-center"><button onclick="fonction1()" class="btn py-1 px-2" type="button">Modifier</button></td>
-                </tr>
-                <tr>
-                  <td class="font-bold text-2xl">Y_R2_odo</td>
-                  <td class="font-bold text-4xl text-center" name="R2_pos_odom_Y" id="R2_pos_odom_Y">2</td>
-                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_pos_odom_Y_newvalue" id="R2_pos_odom_Y_newvalue"></td>
-                  <td class="text-center"><button onclick="fonction2()" class="btn py-1 px-2" type="button">Modifier</button></td>
-                </tr>
-                <tr>
-                  <td class="font-bold text-2xl">Theta</td>
-                  <td class="font-bold text-4xl text-center" name="R2_pos_odom_Theta" id="R2_pos_odom_Theta">3</td>
-                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_pos_odom_Theta_newvalue" id="R2_pos_odom_Theta_newvalue"></td>
-                  <td class="text-center"><button onclick="fonction3()" class="btn py-1 px-2" type="button">Modifier</button></td>
-                </tr>
-                <tr>
-                  <td class="font-bold text-2xl">Vitesse</td>
-                  <td class="font-bold text-4xl text-center" name="R2_vitesse" id="R2_vitesse">4</td>
-                  <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_vitesse_newvalue" id="R2_vitesse_newvalue"></td>
-                  <td class="text-center"><button onclick="fonction4()" class="btn py-1 px-2" type="button">Modifier</button></td>
-                </tr>
+              <tr>
+                <td class="font-bold text-2xl">X_R2_odo</td>
+                <td class="font-bold text-4xl text-center" name="R2_pos_odom_X" id="R2_pos_odom_X">1</td>
+                <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_pos_odom_X_newvalue"
+                           id="R2_pos_odom_X_newvalue"></td>
+                <td class="text-center">
+                  <button onclick="fct18()" class="btn py-1 px-2" type="button">Modifier</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="font-bold text-2xl">Y_R2_odo</td>
+                <td class="font-bold text-4xl text-center" name="R2_pos_odom_Y" id="R2_pos_odom_Y">2</td>
+                <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_pos_odom_Y_newvalue"
+                           id="R2_pos_odom_Y_newvalue"></td>
+                <td class="text-center">
+                  <button onclick="fct19()" class="btn py-1 px-2" type="button">Modifier</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="font-bold text-2xl">Theta</td>
+                <td class="font-bold text-4xl text-center" name="R2_pos_odom_Theta" id="R2_pos_odom_Theta">3</td>
+                <td><input type="text" class="h-8 w-full rounded" placeholder="New value"
+                           name="R2_pos_odom_Theta_newvalue" id="R2_pos_odom_Theta_newvalue"></td>
+                <td class="text-center">
+                  <button onclick="fct20()" class="btn py-1 px-2" type="button">Modifier</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="font-bold text-2xl">Vitesse</td>
+                <td class="font-bold text-4xl text-center" name="R2_vitesse" id="R2_vitesse">4</td>
+                <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R2_vitesse_newvalue"
+                           id="R2_vitesse_newvalue"></td>
+                <td class="text-center">
+                  <button onclick="fct21()" class="btn py-1 px-2" type="button">Modifier</button>
+                </td>
+              </tr>
               </tbody>
             </table>
 
@@ -472,7 +500,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R2_GPIO1" id="R2_GPIO1">44</p>
                   <input type="text" name="R2_GPIO1_newvalue" id="R2_GPIO1_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction5()" type="button">Modifier</button>
+                <button class="btn" onclick="fct22()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -482,7 +510,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R2_GPIO2" id="R2_GPIO2">44</p>
                   <input type="text" name="R2_GPIO2_newvalue" id="R2_GPIO2_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction6()" type="button">Modifier</button>
+                <button class="btn" onclick="fct23()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -492,7 +520,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R2_GPIO3" id="R2_GPIO3">44</p>
                   <input type="text" name="R2_GPIO3_newvalue" id="R2_GPIO3_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction7()" type="button">Modifier</button>
+                <button class="btn" onclick="fct24()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -502,7 +530,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R2_GPIO4" id="R2_GPIO4">44</p>
                   <input type="text" name="R2_GPIO4_newvalue" id="R2_GPIO4_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction8()" type="button">Modifier</button>
+                <button class="btn" onclick="fct25()" type="button">Modifier</button>
               </label>
             </div>
           </div>
@@ -514,7 +542,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R2_GPIO5" id="R2_GPIO5">44</p>
                   <input type="text" name="R2_GPIO5_newvalue" id="R2_GPIO5_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction9()" type="button">Modifier</button>
+                <button class="btn" onclick="fct26()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -524,7 +552,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R2_GPIO6" id="R2_GPIO6">44</p>
                   <input type="text" name="R2_GPIO6_newvalue" id="R2_GPIO6_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction10()" type="button">Modifier</button>
+                <button class="btn" onclick="fct27()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -534,7 +562,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R2_GPIO7" id="R2_GPIO7">44</p>
                   <input type="text" name="R2_GPIO7_newvalue" id="R2_GPIO7_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction11()" type="button">Modifier</button>
+                <button class="btn" onclick="fct28()" type="button">Modifier</button>
               </label>
             </div>
             <div class="flex">
@@ -544,7 +572,7 @@
                   <p class="bg-white rounded p-2 w-12" name="R2_GPIO8" id="R2_GPIO8">44</p>
                   <input type="text" name="R2_GPIO8_newvalue" id="R2_GPIO8_newvalue" placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction12()" type="button">Modifier</button>
+                <button class="btn" onclick="fct29()" type="button">Modifier</button>
               </label>
             </div>
           </div>
@@ -558,17 +586,19 @@
                 <label for="moteur-input" class="w-16 font-bold">Direction</label>
                 <div class="flex gap-4">
                   <p class="bg-white rounded p-2 w-12" name="R2_moteur1_dir" id="R2_moteur1_dir">44</p>
-                  <input type="text" name="R2_moteur1_dir_newvalue" id="R2_moteur1_dir_newvalue" placeholder="New value">
+                  <input type="text" name="R2_moteur1_dir_newvalue" id="R2_moteur1_dir_newvalue"
+                         placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction13()" type="button">Modifier</button>
+                <button class="btn" onclick="fct30()" type="button">Modifier</button>
               </div>
               <div class="flex input-box">
                 <label for="pwm-input" class="w-16 font-bold">PWM</label>
                 <div class="flex gap-4 ml-5">
                   <p class="bg-white rounded p-2 w-12" name="R2_moteur1_pwm" id="R2_moteur1_pwm">44</p>
-                  <input type="text" name="R2_moteur1_pwm_newvalue" id="R2_moteur1_pwm_newvalue" placeholder="New value">
+                  <input type="text" name="R2_moteur1_pwm_newvalue" id="R2_moteur1_pwm_newvalue"
+                         placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction14()" type="button">Modifier</button>
+                <button class="btn" onclick="fct31()" type="button">Modifier</button>
               </div>
             </div>
           </div>
@@ -579,17 +609,19 @@
                 <label for="moteur2-input" class="w-16 font-bold">Direction</label>
                 <div class="flex gap-4">
                   <p class="bg-white rounded p-2 w-12" name="R2_moteur2_dir" id="R2_moteur2_dir">44</p>
-                  <input type="text" name="R2_moteur2_dir_newvalue" id="R2_moteur2_dir_newvalue" placeholder="New value">
+                  <input type="text" name="R2_moteur2_dir_newvalue" id="R2_moteur2_dir_newvalue"
+                         placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction15()" type="button">Modifier</button>
+                <button class="btn" onclick="fct32()" type="button">Modifier</button>
               </div>
               <div class="flex input-box">
                 <label for="pwm2-input" class="w-16 font-bold">PWM</label>
                 <div class="flex gap-4 ml-5">
                   <p class="bg-white rounded p-2 w-12" name="R2_moteur2_pwm" id="R2_moteur2_pwm">44</p>
-                  <input type="text" name="R2_moteur2_pwm_newvalue" id="R2_moteur2_pwm_newvalue" placeholder="New value">
+                  <input type="text" name="R2_moteur2_pwm_newvalue" id="R2_moteur2_pwm_newvalue"
+                         placeholder="New value">
                 </div>
-                <button class="btn" onclick="fonction16()" type="button">Modifier</button>
+                <button class="btn" onclick="fct33()" type="button">Modifier</button>
               </div>
             </div>
           </div>
@@ -707,9 +739,9 @@
               </tbody>
             </table>
             <div class="grid grid-rows-2 gap-4 self-end mb-3">
-            <button type="reset" class="btn">Clear</button>
-            <button type="button" class="btn" onclick="fonction17()">Modifier</button>
-          </div>
+              <button type="reset" class="btn">Effacer</button>
+              <button type="button" class="btn" onclick="fct34()">Modifier</button>
+            </div>
           </div>
           <div class="grid grid-cols-3 gap-4 mt-3">
             <button class="btn" type="button" onclick="R2_automatisme1()">Automatisme 1</button>
@@ -726,7 +758,7 @@
       </div>
     </div>
   </section>
-  <section class="tab" id="R1-asserv" data-active="active">
+  <section class="tab" id="R1-asserv" data-active="inactive">
     <div class="flex w-screen h-screen">
       <div class="w-1/2 p-5 bg-gray-700 flex flex-col gap-3">
         <div class="w-full flex flex-col justify-center card">
@@ -736,25 +768,25 @@
           <div class="flex flex-row justify-between">
             <div class="parametre">
               <label for="entraxe" class="font-bold">Entraxe (mm)</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_entraxe" value="10">
             </div>
             <div class="parametre">
               <label for="entraxe" class="font-bold">Diametre_motrice</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_diametre_motrice" value="10">
             </div>
             <div class="parametre">
-              <label for="entraxe" class="font-bold">Perimetre (mm)</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <label for="entraxe" class="font-bold">Perimetre_roue (mm)</label>
+              <input class="w-12" type="text" id="R1_perimetre_roue" value="10">
             </div>
           </div>
-          <div class="flex flex-row">
+          <div class="flex flex-row justify-evenly">
             <div class="parametre">
               <label for="entraxe" class="font-bold">Coeff_gauche</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_coeff_gauche" value="10">
             </div>
             <div class="parametre">
               <label for="entraxe" class="font-bold">Coeff_droite</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_coeff_droite" value="10">
             </div>
           </div>
         </div>
@@ -765,188 +797,428 @@
           <div class="flex flex-row justify-between">
             <div class="parametre">
               <label for="entraxe" class="font-bold">Max_integrale_blocage</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_max_integrale_blocage" value="">
             </div>
             <div class="parametre">
-              <label for="entraxe" class="font-bold">Max_erreur integral_v</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <label for="entraxe" class="font-bold">Max_erreur_integrale</label>
+              <input class="w-12" type="text" id="R1_max_erreur_integrale" value="">
             </div>
             <div class="parametre">
               <label for="entraxe" class="font-bold">Seuil_immobilite</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_seuil_immobilite" value="">
             </div>
           </div>
         </div>
-      <div class="flex gap-4">
-        <div class="w-3/5 flex flex-col card">
-          <div class="rounded w-full flex justify-center bg-blue-500">
-            <p class="font-bold">Asservissement_distance</p>
-          </div>
-          <div class="flex flex-row">
-            <div class="flex flex-col w-1/2">
+        <div class="flex gap-4">
+          <div class="w-1/2 flex flex-col card">
+            <div class="rounded w-full flex justify-center bg-blue-500">
+              <p class="font-bold">Asservissement_distance</p>
+            </div>
+            <div class="flex flex-row justify-between">
               <div class="parametre">
-                <label for="entraxe" class="font-bold">Vitesse_consigne_max</label>
-                <input class="w-10" type="text" id="entraxe" value="44">
+                <p for="entraxe" class="font-bold">Vitesse_consigne_max</p>
               </div>
               <div class="parametre">
-                <label for="entraxe" class="font-bold">Vitesse_distance_min</label>
-                <input class="w-10" type="text" id="entraxe" value="44">
+                <p for="entraxe" class="font-bold">Vitesse_distance_min</p>
               </div>
             </div>
-            <div class="flex flex-col w-1/2">
+            <div class="flex flex-row justify-between ">
+                <input class="w-40" type="text" name"Vitesse_consigne_max" id="R1_vitesse_consigne_max" value="">
+                <input class="w-40" type="text" id="R1_vitesse_distance_min" value="">
+            </div>
+            <div class="flex flex-row justify-between">
               <div class="parametre">
-                <label for="entraxe" class="font-bold">Vitesse_max_tension</label>
-                <input class="w-10" type="text" id="entraxe" value="44">
+                <p for="entraxe" class="font-bold">Vitesse_max_tension</p>
               </div>
               <div class="parametre">
-                <label for="entraxe" class="font-bold">Distance_consigne</label>
-                <input class="w-10" type="text" id="entraxe" value="44">
+                <p for="entraxe" class="font-bold">Distance_consigne</p>
+              </div>
+            </div>
+            <div class="flex flex-row justify-between">
+              <input class="w-40" type="text" id="R1_vitesse_max_tension" value="">
+              <input class="w-40" type="text" id="R1_distance_consigne" value="">
+            </div>
+          </div>
+          <div class="w-1/2 flex flex-col card">
+            <div class="rounded w-full flex justify-center bg-blue-500">
+              <p class="font-bold">Asservissement_angle</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Vitesse_angle_max</p>
+              </div>
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Vitesse_angle_min</p>
+              </div>
+            </div>
+            <div class="flex flex-row justify-between">
+                <input class="w-40" type="text" id="R1_vitesse_angle_max" value="">
+                <input class="w-40" type="text" id="R1_Vitesse_angle_min" value="">
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Orientation_consigne_deg</p>
+              </div>
+            </div>
+            <div class="flex flex-row">
+              <input class="w-40" type="text" id="R1_orientation_consigne" value="">
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 grid-rows-2 gap-4 my-2">
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Vitesse</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R1_vitesse_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R1_vitesse_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R1_vitesse_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Orientation</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R1_orientation_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R1_orientation_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R1_orientation_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Position</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R1_position_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R1_position_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R1_position_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Blocage</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R1_blocage_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R1_blocage_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R1_blocage_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Hybride</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R1_hybride_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R1_hybride_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R1_hybride_D" value="">
               </div>
             </div>
           </div>
         </div>
-        <div class="w-2/5 flex flex-col card">
-          <div class="rounded w-full flex justify-center bg-blue-500">
-            <p class="font-bold">Asservissement_angle</p>
-          </div>
-          <div class="flex flex-col">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">Vitesse_angle_max</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">Vitesse_angle_min</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">Orientation_consigne_deg</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
-            </div>
-          </div>
+        <div class="w-full flex flex-row justify-between card mt-6">
+          <a href="aide_asserv_R1R2.html" target="_blank" class="btn">Aide</a>
+          <button class="btn" type="reset">Effacer</button>
+          <button class="btn" onclick="fct35()" type="button">Modifier</button>
+          <button class="btn" onclick="fct()" type="button">Valider</button>
         </div>
-      </div>
-      <div class="grid grid-cols-3 grid-rows-2 gap-4 my-2">
-        <div class="w-full justify-center card">
-          <div class="rounded flex justify-center bg-violet-500">
-            <p class="font-bold">PID_Vitesse</p>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">P</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">I</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">D</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-          </div>
-        </div>
-        <div class="w-full justify-center card">
-          <div class="rounded flex justify-center bg-violet-500">
-            <p class="font-bold">PID_Orientation</p>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">P</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">I</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">D</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-          </div>
-        </div>
-        <div class="w-full justify-center card">
-          <div class="rounded flex justify-center bg-violet-500">
-            <p class="font-bold">PID_Position</p>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">P</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">I</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">D</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-          </div>
-        </div>
-        <div class="w-full justify-center card">
-          <div class="rounded flex justify-center bg-violet-500">
-            <p class="font-bold">PID_Blocage</p>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">P</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">I</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">D</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-          </div>
-        </div>
-        <div class="w-full justify-center card">
-          <div class="rounded flex justify-center bg-violet-500">
-            <p class="font-bold">PID_Hybride</p>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">P</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">I</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">D</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full flex flex-col justify-center card">
-          <p class="w-16">bouton</p>
-      </div>
 
       </div>
       <div class="w-1/2 p-5 bg-gray-900 flex flex-col gap-4">
-        <div class="w-full flex flex-col justify-center card">
-        </div>
-        <div class="h-1/2 flex flex-col justify-center card">
+        <div class="flex flex-col">
           <div class="rounded w-full flex justify-center bg-yellow-500">
             <p class="font-bold">courbe vitesse</p>
           </div>
         </div>
-        <div class="flex flex-col justify-center card">
+        <div class="h-3/4 flex flex-col card">
+        </div>
+        <div class="flex flex-col card mt-3">
           <div class="rounded w-full flex justify-center bg-yellow-500">
             <p class="font-bold">Déplacement</p>
           </div>
+          <div class="flex flex-row justify-center gap-2 p-2">
+            <input type="text" class="px-2 w-96" placeholder="Commande" value=""/>
+            <button class="btn">Valider</button>
+          </div>
         </div>
+      </div>
     </div>
   </section>
   <section class="tab" id="R2-asserv" data-active="inactive">
     <div class="flex w-screen h-screen">
-      <div class="w-1/2 p-5 bg-gray-900 flex flex-col gap-4">
+      <div class="w-1/2 p-5 bg-gray-900 flex flex-col gap-3">
+        <div class="w-full flex flex-col justify-center card">
+          <div class="rounded w-full flex justify-center bg-red-500">
+            <p class="font-bold">Odométrie roue</p>
+          </div>
+          <div class="flex flex-row justify-between">
+            <div class="parametre">
+              <label for="entraxe" class="font-bold">Entraxe (mm)</label>
+              <input class="w-12" type="text" id="R2_entraxe" value="">
+            </div>
+            <div class="parametre">
+              <label for="entraxe" class="font-bold">Diametre_motrice</label>
+              <input class="w-12" type="text" id="R2_diametre_motrice" value="">
+            </div>
+            <div class="parametre">
+              <label for="entraxe" class="font-bold">Perimetre_roue (mm)</label>
+              <input class="w-12" type="text" id="R2_perimetre_roue" value="">
+            </div>
+          </div>
+          <div class="flex flex-row justify-evenly">
+            <div class="parametre">
+              <label for="entraxe" class="font-bold">Coeff_gauche</label>
+              <input class="w-12" type="text" id="R2_coeff_gauche" value="">
+            </div>
+            <div class="parametre">
+              <label for="entraxe" class="font-bold">Coeff_droite</label>
+              <input class="w-12" type="text" id="R2_coeff_droite" value="">
+            </div>
+          </div>
+        </div>
+        <div class="w-full flex flex-col justify-center card">
+          <div class="rounded w-full flex justify-center bg-blue-500">
+            <p class="font-bold">Asservissement</p>
+          </div>
+          <div class="flex flex-row justify-between">
+            <div class="parametre">
+              <label for="entraxe" class="font-bold">Max_integrale_blocage</label>
+              <input class="w-12" type="text" id="R2_max_integrale_blocage" value="">
+            </div>
+            <div class="parametre">
+              <label for="entraxe" class="font-bold">Max_erreur_integrale</label>
+              <input class="w-12" type="text" id="R2_max_erreur_integrale" value="">
+            </div>
+            <div class="parametre">
+              <label for="entraxe" class="font-bold">Seuil_immobilite</label>
+              <input class="w-12" type="text" id="R2_seuil_immobilite" value="">
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-1/2 flex flex-col card">
+            <div class="rounded w-full flex justify-center bg-blue-500">
+              <p class="font-bold">Asservissement_distance</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Vitesse_consigne_max</p>
+              </div>
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Vitesse_distance_min</p>
+              </div>
+            </div>
+            <div class="flex flex-row justify-between ">
+                <input class="w-40" type="text" name"Vitesse_consigne_max" id="R2_vitesse_consigne_max" value="">
+                <input class="w-40" type="text" id="R2_vitesse_distance_min" value="">
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Vitesse_max_tension</p>
+              </div>
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Distance_consigne</p>
+              </div>
+            </div>
+            <div class="flex flex-row justify-between">
+              <input class="w-40" type="text" id="R2_vitesse_max_tension" value="">
+              <input class="w-40" type="text" id="R2_distance_consigne" value="">
+            </div>
+          </div>
+          <div class="w-1/2 flex flex-col card">
+            <div class="rounded w-full flex justify-center bg-blue-500">
+              <p class="font-bold">Asservissement_angle</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Vitesse_angle_max</p>
+              </div>
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Vitesse_angle_min</p>
+              </div>
+            </div>
+            <div class="flex flex-row justify-between">
+                <input class="w-40" type="text" id="R2_vitesse_angle_max" value="">
+                <input class="w-40" type="text" id="R2_Vitesse_angle_min" value="">
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Orientation_consigne_deg</p>
+              </div>
+            </div>
+            <div class="flex flex-row">
+              <input class="w-40" type="text" id="R2_orientation_consigne" value="">
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 grid-rows-2 gap-4 my-2">
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Vitesse</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R2_vitesse_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R2_vitesse_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R2_vitesse_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Orientation</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R2_orientation_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R2_orientation_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R2_orientation_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Position</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R2_position_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R2_position_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R2_position_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Blocage</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R2_blocage_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R2_blocage_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R2_blocage_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Hybride</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R2_hybride_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R2_hybride_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R2_hybride_D" value="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full flex flex-row justify-between card mt-6">
+          <a href="aide_asserv_R1R2.html" target="_blank" class="btn">Aide</a>
+          <button class="btn" type="reset">Effacer</button>
+          <button class="btn" onclick="fct36()" type="button">Modifier</button>
+          <button class="btn" onclick="fct()" type="button">valider</button>
+        </div>
+
       </div>
-      <div class="w-1/2 p-5 bg-gray-700 flex flex-col gap-5">
+      <div class="w-1/2 p-5 bg-gray-700 flex flex-col gap-4">
+        <div class="flex flex-col">
+          <div class="rounded w-full flex justify-center bg-yellow-500">
+            <p class="font-bold">courbe vitesse</p>
+          </div>
+        </div>
+        <div class="h-3/4 flex flex-col card">
+        </div>
+        <div class="flex flex-col card mt-3">
+          <div class="rounded w-full flex justify-center bg-yellow-500">
+            <p class="font-bold">Déplacement</p>
+          </div>
+          <div class="flex flex-row justify-center gap-2 p-2 ">
+            <input type="text" class="px-2 w-96" placeholder="Commande" value=""/>
+            <button class="btn">Valider</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
