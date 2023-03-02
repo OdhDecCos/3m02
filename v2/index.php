@@ -972,22 +972,27 @@
 
       </div>
       <div class="w-1/2 p-5 bg-gray-900 flex flex-col gap-4">
-        <div class="w-full flex flex-col justify-center card">
+        <div class="flex flex-col">
+          <div class="rounded w-full flex justify-center bg-yellow-500">
+            <p class="font-bold">courbe vitesse</p>
+          </div>
         </div>
-        <div class="h-1/2 flex flex-col justify-center card">
-          <div class="rounded w-full flex flex-wrap justify-center bg-yellow-500">
+        <div class="h-3/4 flex flex-wrap justify-center items-center gap-1 card">
           <div id="chartR1"></div>
           <div id="chartR2"></div>
           <div id="chartR3"></div>
           <div id="chartR4"></div>
-          </div>
         </div>
-        <div class="flex flex-col justify-center card">
+        <div class="flex flex-col card mt-3">
           <div class="rounded w-full flex justify-center bg-yellow-500">
             <p class="font-bold">Déplacement</p>
           </div>
+          <div class="flex flex-row justify-center gap-2 p-2">
+            <input type="text" class="px-2 w-96" placeholder="Commande" value=""/>
+            <button class="btn">Valider</button>
+          </div>
         </div>
-    </div>
+      </div>
   </section>
   <section class="tab" id="R2-asserv" data-active="inactive">
     <div class="flex w-screen h-screen">

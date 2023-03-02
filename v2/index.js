@@ -42,8 +42,8 @@ function drawChart() {
     var options = {
         title: 'Positions',
         curveType: 'function',
-        width: 300,
-        height: 175,
+        width: 350,
+        height: 250,
         legend: {
             position: 'bottom'
         }
