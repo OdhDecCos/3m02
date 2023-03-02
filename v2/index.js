@@ -38,7 +38,7 @@ function drawChart() {
         dataR1.addRow([i, parseInt(my_2d[my_2d.length - i][1]), parseInt(my_2d[my_2d.length - i][2]), parseInt(my_2d[my_2d.length - i][3])]);
         dataR2.addRow([i, parseInt(my_2d[my_2d.length - i][4]), parseInt(my_2d[my_2d.length - i][5]), parseInt(my_2d[my_2d.length - i][6])]);
     }
-        
+
     var options = {
         title: 'Positions',
         curveType: 'function',
@@ -78,7 +78,7 @@ function fct2() {
     document.getElementById("R1_pos_odom_Y").innerHTML = R1_pos_odom_Y;
     }
   }
-  
+
   function fct3() {
     var R1_pos_odom_Theta = document.getElementById("R1_pos_odom_Theta_newvalue").value;
     if(R1_pos_odom_Theta_newvalue.value==""){
@@ -87,7 +87,7 @@ function fct2() {
     document.getElementById("R1_pos_odom_Theta").innerHTML = R1_pos_odom_Theta;
     }
   }
-  
+
   function fct4() {
     var R1_vitesse = document.getElementById("R1_vitesse_newvalue").value;
     if(R1_vitesse_newvalue.value==""){
@@ -96,7 +96,7 @@ function fct2() {
     document.getElementById("R1_vitesse").innerHTML = R1_vitesse;
     }
   }
-  
+
   function fct5() {
     var R1_GPIO1 = document.getElementById("R1_GPIO1_newvalue").value;
     if(R1_GPIO1_newvalue.value==""){
@@ -105,7 +105,7 @@ function fct2() {
     document.getElementById("R1_GPIO1").innerHTML = R1_GPIO1;
     }
   }
-  
+
   function fct6() {
     var R1_GPIO2 = document.getElementById("R1_GPIO2_newvalue").value;
     if(R1_GPIO2_newvalue.value==""){
@@ -114,7 +114,7 @@ function fct2() {
     document.getElementById("R1_GPIO2").innerHTML = R1_GPIO2;
     }
   }
-  
+
   function fct7() {
     var R1_GPIO3 = document.getElementById("R1_GPIO3_newvalue").value;
     if(R1_GPIO3_newvalue.value==""){
@@ -123,7 +123,7 @@ function fct2() {
     document.getElementById("R1_GPIO3").innerHTML = R1_GPIO3;
     }
   }
-  
+
   function fct8() {
     var R1_GPIO4 = document.getElementById("R1_GPIO4_newvalue").value;
     if(R1_GPIO4_newvalue.value==""){
@@ -132,7 +132,7 @@ function fct2() {
     document.getElementById("R1_GPIO4").innerHTML = R1_GPIO4;
     }
   }
-  
+
   function fct9() {
     var R1_GPIO5 = document.getElementById("R1_GPIO5_newvalue").value;
     if(R1_GPIO5_newvalue.value==""){
@@ -141,7 +141,7 @@ function fct2() {
     document.getElementById("R1_GPIO5").innerHTML = R1_GPIO5;
     }
   }
-  
+
   function fct10() {
     var R1_GPIO6 = document.getElementById("R1_GPIO6_newvalue").value;
     if(R1_GPIO6_newvalue.value==""){
@@ -150,7 +150,7 @@ function fct2() {
     document.getElementById("R1_GPIO6").innerHTML = R1_GPIO6;
     }
   }
-  
+
   function fct11() {
     var R1_GPIO7 = document.getElementById("R1_GPIO7_newvalue").value;
     if(R1_GPIO7_newvalue.value==""){
@@ -159,7 +159,7 @@ function fct2() {
     document.getElementById("R1_GPIO7").innerHTML = R1_GPIO7;
     }
   }
-  
+
   function fct12() {
     var R1_GPIO8 = document.getElementById("R1_GPIO8_newvalue").value;
     if(R1_GPIO8_newvalue.value==""){
@@ -168,7 +168,7 @@ function fct2() {
     document.getElementById("R1_GPIO8").innerHTML = R1_GPIO8;
     }
   }
-  
+
   function fct13() {
     var R1_moteur1_dir = document.getElementById("R1_moteur1_dir_newvalue").value;
     if(R1_moteur1_dir_newvalue.value==""){
@@ -177,7 +177,7 @@ function fct2() {
     document.getElementById("R1_moteur1_dir").innerHTML = R1_moteur1_dir;
     }
   }
-  
+
   function fct14() {
     var R1_moteur1_pwm = document.getElementById("R1_moteur1_pwm_newvalue").value;
     if(R1_moteur1_pwm_newvalue.value==""){
@@ -186,7 +186,7 @@ function fct2() {
     document.getElementById("R1_moteur1_pwm").innerHTML = R1_moteur1_pwm;
     }
   }
-  
+
   function fct15() {
     var R1_moteur2_dir = document.getElementById("R1_moteur2_dir_newvalue").value;
     if(R1_moteur2_dir_newvalue.value==""){
@@ -195,7 +195,7 @@ function fct2() {
     document.getElementById("R1_moteur2_dir").innerHTML = R1_moteur2_dir;
     }
   }
-  
+
   function fct16() {
     var R1_moteur2_pwm = document.getElementById("R1_moteur2_pwm_newvalue").value;
     if(R1_moteur2_pwm_newvalue.value==""){
@@ -204,82 +204,82 @@ function fct2() {
     document.getElementById("R1_moteur2_pwm").innerHTML = R1_moteur2_pwm;
     }
   }
-  
+
   function fct17() {
-    var R1_pos_ax12_1 = document.getElementById("R1_pos_ax12_1_newvalue").value;
-    if(R1_pos_ax12_1_newvalue.value==""){
-      R1_pos_ax12_1.value =document.getElementById("R1_pos_ax12_1");
+    var R1_ax12_1_pos = document.getElementById("R1_ax12_1_pos_newvalue").value;
+    if(R1_ax12_1_pos_newvalue.value==""){
+      R1_ax12_1_pos.value =document.getElementById("R1_ax12_1_pos");
     }else{
-    document.getElementById("R1_pos_ax12_1").innerHTML = R1_pos_ax12_1;
+    document.getElementById("R1_ax12_1_pos").innerHTML = R1_ax12_1_pos;
     }
-    var R1_pos_ax12_2 = document.getElementById("R1_pos_ax12_2_newvalue").value;
-    if(R1_pos_ax12_2_newvalue.value==""){
-      R1_pos_ax12_2.value =document.getElementById("R1_pos_ax12_2");
+    var R1_ax12_2_pos = document.getElementById("R1_ax12_2_pos_newvalue").value;
+    if(R1_ax12_2_pos_newvalue.value==""){
+      R1_ax12_2_pos.value =document.getElementById("R1_ax12_2_pos");
     }else{
-    document.getElementById("R1_pos_ax12_2").innerHTML = R1_pos_ax12_2;
+    document.getElementById("R1_ax12_2_pos").innerHTML = R1_ax12_2_pos;
     }
-    var R1_pos_ax12_3 = document.getElementById("R1_pos_ax12_3_newvalue").value;
-    if(R1_pos_ax12_3_newvalue.value==""){
-      R1_pos_ax12_3.value =document.getElementById("R1_pos_ax12_3");
+    var R1_ax12_3_pos = document.getElementById("R1_ax12_3_pos_newvalue").value;
+    if(R1_ax12_3_pos_newvalue.value==""){
+      R1_ax12_3_pos.value =document.getElementById("R1_ax12_3_pos");
     }else{
-    document.getElementById("R1_pos_ax12_3").innerHTML = R1_pos_ax12_3;
+    document.getElementById("R1_ax12_3_pos").innerHTML = R1_ax12_3_pos;
     }
-    var R1_pos_ax12_4 = document.getElementById("R1_pos_ax12_4_newvalue").value;
-    if(R1_pos_ax12_4_newvalue.value==""){
-      R1_pos_ax12_4.value =document.getElementById("R1_pos_ax12_4");
+    var R1_ax12_4_pos = document.getElementById("R1_ax12_4_pos_newvalue").value;
+    if(R1_ax12_4_pos_newvalue.value==""){
+      R1_ax12_4_pos.value =document.getElementById("R1_ax12_4_pos");
     }else{
-    document.getElementById("R1_pos_ax12_4").innerHTML = R1_pos_ax12_4;
+    document.getElementById("R1_ax12_4_pos").innerHTML = R1_ax12_4_pos;
     }
-    var R1_pos_ax12_5 = document.getElementById("R1_pos_ax12_5_newvalue").value;
-    if(R1_pos_ax12_5_newvalue.value==""){
-      R1_pos_ax12_5.value =document.getElementById("R1_pos_ax12_5");
+    var R1_ax12_5_pos = document.getElementById("R1_ax12_5_pos_newvalue").value;
+    if(R1_ax12_5_pos_newvalue.value==""){
+      R1_ax12_5_pos.value =document.getElementById("R1_ax12_5_pos");
     }else{
-    document.getElementById("R1_pos_ax12_5").innerHTML = R1_pos_ax12_5;
+    document.getElementById("R1_ax12_5_pos").innerHTML = R1_ax12_5_pos;
     }
-    var R1_pos_ax12_6 = document.getElementById("R1_pos_ax12_6_newvalue").value;
-    if(R1_pos_ax12_6_newvalue.value==""){
-      R1_pos_ax12_6.value =document.getElementById("R1_pos_ax12_6");
+    var R1_ax12_6_pos = document.getElementById("R1_ax12_6_pos_newvalue").value;
+    if(R1_ax12_6_pos_newvalue.value==""){
+      R1_ax12_6_pos.value =document.getElementById("R1_ax12_6_pos");
     }else{
-    document.getElementById("R1_pos_ax12_6").innerHTML = R1_pos_ax12_6;
+    document.getElementById("R1_ax12_6_pos").innerHTML = R1_ax12_6_pos;
     }
-    var R1_pos_ax12_7 = document.getElementById("R1_pos_ax12_7_newvalue").value;
-    if(R1_pos_ax12_7_newvalue.value==""){
-      R1_pos_ax12_7.value =document.getElementById("R1_pos_ax12_7");
+    var R1_ax12_7_pos = document.getElementById("R1_ax12_7_pos_newvalue").value;
+    if(R1_ax12_7_pos_newvalue.value==""){
+      R1_ax12_7_pos.value =document.getElementById("R1_ax12_7_pos");
     }else{
-    document.getElementById("R1_pos_ax12_7").innerHTML = R1_pos_ax12_7;
+    document.getElementById("R1_ax12_7_pos").innerHTML = R1_ax12_7_pos;
     }
-    var R1_pos_ax12_8 = document.getElementById("R1_pos_ax12_8_newvalue").value;
-    if(R1_pos_ax12_8_newvalue.value==""){
-      R1_pos_ax12_8.value =document.getElementById("R1_pos_ax12_8");
+    var R1_ax12_8_pos = document.getElementById("R1_ax12_8_pos_newvalue").value;
+    if(R1_ax12_8_pos_newvalue.value==""){
+      R1_ax12_8_pos.value =document.getElementById("R1_ax12_8_pos");
     }else{
-    document.getElementById("R1_pos_ax12_8").innerHTML = R1_pos_ax12_8;
+    document.getElementById("R1_ax12_8_pos").innerHTML = R1_ax12_8_pos;
     }
-    var R1_pos_ax12_9 = document.getElementById("R1_pos_ax12_9_newvalue").value;
-    if(R1_pos_ax12_9_newvalue.value==""){
-      R1_pos_ax12_9.value =document.getElementById("R1_pos_ax12_9");
+    var R1_ax12_9_pos = document.getElementById("R1_ax12_9_pos_newvalue").value;
+    if(R1_ax12_9_pos_newvalue.value==""){
+      R1_ax12_9_pos.value =document.getElementById("R1_ax12_9_pos");
     }else{
-    document.getElementById("R1_pos_ax12_9").innerHTML = R1_pos_ax12_9;
+    document.getElementById("R1_ax12_9_pos").innerHTML = R1_ax12_9_pos;
     }
-    var R1_pos_ax12_10 = document.getElementById("R1_pos_ax12_10_newvalue").value;
-    if(R1_pos_ax12_10_newvalue.value==""){
-      R1_pos_ax12_10.value =document.getElementById("R1_pos_ax12_10");
+    var R1_ax12_10_pos = document.getElementById("R1_ax12_10_pos_newvalue").value;
+    if(R1_ax12_10_pos_newvalue.value==""){
+      R1_ax12_10_pos.value =document.getElementById("R1_ax12_10_pos");
     }else{
-    document.getElementById("R1_pos_ax12_10").innerHTML = R1_pos_ax12_10;
+    document.getElementById("R1_ax12_10_pos").innerHTML = R1_ax12_10_pos;
     }
-    var R1_pos_ax12_11 = document.getElementById("R1_pos_ax12_11_newvalue").value;
-    if(R1_pos_ax12_11_newvalue.value==""){
-      R1_pos_ax12_11.value =document.getElementById("R1_pos_ax12_11");
+    var R1_ax12_11_pos = document.getElementById("R1_ax12_11_pos_newvalue").value;
+    if(R1_ax12_11_pos_newvalue.value==""){
+      R1_ax12_11_pos.value =document.getElementById("R1_ax12_11_pos");
     }else{
-    document.getElementById("R1_pos_ax12_11").innerHTML = R1_pos_ax12_11;
+    document.getElementById("R1_ax12_11_pos").innerHTML = R1_ax12_11_pos;
     }
-    var R1_pos_ax12_12 = document.getElementById("R1_pos_ax12_12_newvalue").value;
-    if(R1_pos_ax12_12_newvalue.value==""){
-      R1_pos_ax12_12.value =document.getElementById("R1_pos_ax12_12");
+    var R1_ax12_12_pos = document.getElementById("R1_ax12_12_pos_newvalue").value;
+    if(R1_ax12_12_pos_newvalue.value==""){
+      R1_ax12_12_pos.value =document.getElementById("R1_ax12_12_pos");
     }else{
-    document.getElementById("R1_pos_ax12_12").innerHTML = R1_pos_ax12_12;
+    document.getElementById("R1_ax12_12_pos").innerHTML = R1_ax12_12_pos;
     }
   }
-  
+
   /*PAGE_R2*/
   function fct18() {
     var R2_pos_odom_X = document.getElementById("R2_pos_odom_X_newvalue").value;
@@ -289,7 +289,7 @@ function fct2() {
     document.getElementById("R2_pos_odom_X").innerHTML = R2_pos_odom_X;
     }
   }
-  
+
   function fct19() {
     var R2_pos_odom_Y = document.getElementById("R2_pos_odom_Y_newvalue").value;
     if(R2_pos_odom_Y_newvalue.value==""){
@@ -298,7 +298,7 @@ function fct2() {
     document.getElementById("R2_pos_odom_Y").innerHTML = R2_pos_odom_Y;
     }
   }
-  
+
   function fct20() {
     var R2_pos_odom_Theta = document.getElementById("R2_pos_odom_Theta_newvalue").value;
     if(R2_pos_odom_Theta_newvalue.value==""){
@@ -307,7 +307,7 @@ function fct2() {
     document.getElementById("R2_pos_odom_Theta").innerHTML = R2_pos_odom_Theta;
     }
   }
-  
+
   function fct21() {
     var R2_vitesse = document.getElementById("R2_vitesse_newvalue").value;
     if(R2_vitesse_newvalue.value==""){
@@ -316,7 +316,7 @@ function fct2() {
     document.getElementById("R2_vitesse").innerHTML = R2_vitesse;
     }
   }
-  
+
   function fct22() {
     var R2_GPIO1 = document.getElementById("R2_GPIO1_newvalue").value;
     if(R2_GPIO1_newvalue.value==""){
@@ -325,7 +325,7 @@ function fct2() {
     document.getElementById("R2_GPIO1").innerHTML = R2_GPIO1;
     }
   }
-  
+
   function fct23() {
     var R2_GPIO2 = document.getElementById("R2_GPIO2_newvalue").value;
     if(R2_GPIO2_newvalue.value==""){
@@ -334,7 +334,7 @@ function fct2() {
     document.getElementById("R2_GPIO2").innerHTML = R2_GPIO2;
     }
   }
-  
+
   function fct24() {
     var R2_GPIO3 = document.getElementById("R2_GPIO3_newvalue").value;
     if(R2_GPIO3_newvalue.value==""){
@@ -343,7 +343,7 @@ function fct2() {
     document.getElementById("R2_GPIO3").innerHTML = R2_GPIO3;
     }
   }
-  
+
   function fct25() {
     var R2_GPIO4 = document.getElementById("R2_GPIO4_newvalue").value;
     if(R2_GPIO4_newvalue.value==""){
@@ -352,7 +352,7 @@ function fct2() {
     document.getElementById("R2_GPIO4").innerHTML = R2_GPIO4;
     }
   }
-  
+
   function fct26() {
     var R2_GPIO5 = document.getElementById("R2_GPIO5_newvalue").value;
     if(R2_GPIO5_newvalue.value==""){
@@ -361,7 +361,7 @@ function fct2() {
     document.getElementById("R2_GPIO5").innerHTML = R2_GPIO5;
     }
   }
-  
+
   function fct27() {
     var R2_GPIO6 = document.getElementById("R2_GPIO6_newvalue").value;
     if(R2_GPIO6_newvalue.value==""){
@@ -370,7 +370,7 @@ function fct2() {
     document.getElementById("R2_GPIO6").innerHTML = R2_GPIO6;
     }
   }
-  
+
   function fct28() {
     var R2_GPIO7 = document.getElementById("R2_GPIO7_newvalue").value;
     if(R2_GPIO7_newvalue.value==""){
@@ -379,7 +379,7 @@ function fct2() {
     document.getElementById("R2_GPIO7").innerHTML = R2_GPIO7;
     }
   }
-  
+
   function fct29() {
     var R2_GPIO8 = document.getElementById("R2_GPIO8_newvalue").value;
     if(R2_GPIO8_newvalue.value==""){
@@ -388,7 +388,7 @@ function fct2() {
     document.getElementById("R2_GPIO8").innerHTML = R2_GPIO8;
     }
   }
-  
+
   function fct30() {
     var R2_moteur1_dir = document.getElementById("R2_moteur1_dir_newvalue").value;
     if(R2_moteur1_dir_newvalue.value==""){
@@ -397,7 +397,7 @@ function fct2() {
     document.getElementById("R2_moteur1_dir").innerHTML = R2_moteur1_dir;
     }
   }
-  
+
   function fct31() {
     var R2_moteur1_pwm = document.getElementById("R2_moteur1_pwm_newvalue").value;
     if(R2_moteur1_pwm_newvalue.value==""){
@@ -406,7 +406,7 @@ function fct2() {
     document.getElementById("R2_moteur1_pwm").innerHTML = R2_moteur1_pwm;
     }
   }
-  
+
   function fct32() {
     var R2_moteur2_dir = document.getElementById("R2_moteur2_dir_newvalue").value;
     if(R2_moteur2_dir_newvalue.value==""){
@@ -415,7 +415,7 @@ function fct2() {
     document.getElementById("R2_moteur2_dir").innerHTML = R2_moteur2_dir;
     }
   }
-  
+
   function fct33() {
     var R2_moteur2_pwm = document.getElementById("R2_moteur2_pwm_newvalue").value;
     if(R2_moteur2_pwm_newvalue.value==""){
@@ -424,80 +424,80 @@ function fct2() {
     document.getElementById("R2_moteur2_pwm").innerHTML = R2_moteur2_pwm;
     }
   }
-  
+
   function fct34() {
-    var R2_pos_ax12_1 = document.getElementById("R2_pos_ax12_1_newvalue").value;
-    if(R2_pos_ax12_1_newvalue.value==""){
-      R2_pos_ax12_1.value =document.getElementById("R2_pos_ax12_1");
+    var R2_ax12_1_pos = document.getElementById("R2_ax12_1_pos_newvalue").value;
+    if(R2_ax12_1_pos_newvalue.value==""){
+      R2_ax12_1_pos.value =document.getElementById("R2_ax12_1_pos");
     }else{
-    document.getElementById("R2_pos_ax12_1").innerHTML = R2_pos_ax12_1;
+    document.getElementById("R2_ax12_1_pos").innerHTML = R2_ax12_1_pos;
     }
-    var R2_pos_ax12_2 = document.getElementById("R2_pos_ax12_2_newvalue").value;
-    if(R2_pos_ax12_2_newvalue.value==""){
-      R2_pos_ax12_2.value =document.getElementById("R2_pos_ax12_2");
+    var R2_ax12_2_pos = document.getElementById("R2_ax12_2_pos_newvalue").value;
+    if(R2_ax12_2_pos_newvalue.value==""){
+      R2_ax12_2_pos.value =document.getElementById("R2_ax12_2_pos");
     }else{
-    document.getElementById("R2_pos_ax12_2").innerHTML = R2_pos_ax12_2;
+    document.getElementById("R2_ax12_2_pos").innerHTML = R2_ax12_2_pos;
     }
-    var R2_pos_ax12_3 = document.getElementById("R2_pos_ax12_3_newvalue").value;
-    if(R2_pos_ax12_3_newvalue.value==""){
-      R2_pos_ax12_3.value =document.getElementById("R2_pos_ax12_3");
+    var R2_ax12_3_pos = document.getElementById("R2_ax12_3_pos_newvalue").value;
+    if(R2_ax12_3_pos_newvalue.value==""){
+      R2_ax12_3_pos.value =document.getElementById("R2_ax12_3_pos");
     }else{
-    document.getElementById("R2_pos_ax12_3").innerHTML = R2_pos_ax12_3;
+    document.getElementById("R2_ax12_3_pos").innerHTML = R2_ax12_3_pos;
     }
-    var R2_pos_ax12_4 = document.getElementById("R2_pos_ax12_4_newvalue").value;
-    if(R2_pos_ax12_4_newvalue.value==""){
-      R2_pos_ax12_4.value =document.getElementById("R2_pos_ax12_4");
+    var R2_ax12_4_pos = document.getElementById("R2_ax12_4_pos_newvalue").value;
+    if(R2_ax12_4_pos_newvalue.value==""){
+      R2_ax12_4_pos.value =document.getElementById("R2_ax12_4_pos");
     }else{
-    document.getElementById("R2_pos_ax12_4").innerHTML = R2_pos_ax12_4;
+    document.getElementById("R2_ax12_4_pos").innerHTML = R2_ax12_4_pos;
     }
-    var R2_pos_ax12_5 = document.getElementById("R2_pos_ax12_5_newvalue").value;
-    if(R2_pos_ax12_5_newvalue.value==""){
-      R2_pos_ax12_5.value =document.getElementById("R2_pos_ax12_5");
+    var R2_ax12_5_pos = document.getElementById("R2_ax12_5_pos_newvalue").value;
+    if(R2_ax12_5_pos_newvalue.value==""){
+      R2_ax12_5_pos.value =document.getElementById("R2_ax12_5_pos");
     }else{
-    document.getElementById("R2_pos_ax12_5").innerHTML = R2_pos_ax12_5;
+    document.getElementById("R2_ax12_5_pos").innerHTML = R2_ax12_5_pos;
     }
-    var R2_pos_ax12_6 = document.getElementById("R2_pos_ax12_6_newvalue").value;
-    if(R2_pos_ax12_6_newvalue.value==""){
-      R2_pos_ax12_6.value =document.getElementById("R2_pos_ax12_6");
+    var R2_ax12_6_pos = document.getElementById("R2_ax12_6_pos_newvalue").value;
+    if(R2_ax12_6_pos_newvalue.value==""){
+      R2_ax12_6_pos.value =document.getElementById("R2_ax12_6_pos");
     }else{
-    document.getElementById("R2_pos_ax12_6").innerHTML = R2_pos_ax12_6;
+    document.getElementById("R2_ax12_6_pos").innerHTML = R2_ax12_6_pos;
     }
-    var R2_pos_ax12_7 = document.getElementById("R2_pos_ax12_7_newvalue").value;
-    if(R2_pos_ax12_7_newvalue.value==""){
-      R2_pos_ax12_7.value =document.getElementById("R2_pos_ax12_7");
+    var R2_ax12_7_pos = document.getElementById("R2_ax12_7_pos_newvalue").value;
+    if(R2_ax12_7_pos_newvalue.value==""){
+      R2_ax12_7_pos.value =document.getElementById("R2_ax12_7_pos");
     }else{
-    document.getElementById("R2_pos_ax12_7").innerHTML = R2_pos_ax12_7;
+    document.getElementById("R2_ax12_7_pos").innerHTML = R2_ax12_7_pos;
     }
-    var R2_pos_ax12_8 = document.getElementById("R2_pos_ax12_8_newvalue").value;
-    if(R2_pos_ax12_8_newvalue.value==""){
-      R2_pos_ax12_8.value =document.getElementById("R2_pos_ax12_8");
+    var R2_ax12_8_pos = document.getElementById("R2_ax12_8_pos_newvalue").value;
+    if(R2_ax12_8_pos_newvalue.value==""){
+      R2_ax12_8_pos.value =document.getElementById("R2_ax12_8_pos");
     }else{
-    document.getElementById("R2_pos_ax12_8").innerHTML = R2_pos_ax12_8;
+    document.getElementById("R2_ax12_8_pos").innerHTML = R2_ax12_8_pos;
     }
-    var R2_pos_ax12_9 = document.getElementById("R2_pos_ax12_9_newvalue").value;
-    if(R2_pos_ax12_9_newvalue.value==""){
-      R2_pos_ax12_9.value =document.getElementById("R2_pos_ax12_9");
+    var R2_ax12_9_pos = document.getElementById("R2_ax12_9_pos_newvalue").value;
+    if(R2_ax12_9_pos_newvalue.value==""){
+      R2_ax12_9_pos.value =document.getElementById("R2_ax12_9_pos");
     }else{
-    document.getElementById("R2_pos_ax12_9").innerHTML = R2_pos_ax12_9;
+    document.getElementById("R2_ax12_9_pos").innerHTML = R2_ax12_9_pos;
     }
-    var R2_pos_ax12_10 = document.getElementById("R2_pos_ax12_10_newvalue").value;
-    if(R2_pos_ax12_10_newvalue.value==""){
-      R2_pos_ax12_10.value =document.getElementById("R2_pos_ax12_10");
+    var R2_ax12_10_pos = document.getElementById("R2_ax12_10_pos_newvalue").value;
+    if(R2_ax12_10_pos_newvalue.value==""){
+      R2_ax12_10_pos.value =document.getElementById("R2_ax12_10_pos");
     }else{
-    document.getElementById("R2_pos_ax12_10").innerHTML = R2_pos_ax12_10;
+    document.getElementById("R2_ax12_10_pos").innerHTML = R2_ax12_10_pos;
     }
-    var R2_pos_ax12_11 = document.getElementById("R2_pos_ax12_11_newvalue").value;
-    if(R2_pos_ax12_11_newvalue.value==""){
-      R2_pos_ax12_11.value =document.getElementById("R2_pos_ax12_11");
+    var R2_ax12_11_pos = document.getElementById("R2_ax12_11_pos_newvalue").value;
+    if(R2_ax12_11_pos_newvalue.value==""){
+      R2_ax12_11_pos.value =document.getElementById("R2_ax12_11_pos");
     }else{
-    document.getElementById("R2_pos_ax12_11").innerHTML = R2_pos_ax12_11;
+    document.getElementById("R2_ax12_11_pos").innerHTML = R2_ax12_11_pos;
     }
-    var R2_pos_ax12_12 = document.getElementById("R2_pos_ax12_12_newvalue").value;
-    if(R2_pos_ax12_12_newvalue.value==""){
-      R2_pos_ax12_12.value =document.getElementById("R2_pos_ax12_12");
+    var R2_ax12_12_pos = document.getElementById("R2_ax12_12_pos_newvalue").value;
+    if(R2_ax12_12_pos_newvalue.value==""){
+      R2_ax12_12_pos.value =document.getElementById("R2_ax12_12_pos");
     }else{
-    document.getElementById("R2_pos_ax12_12").innerHTML = R2_pos_ax12_12;
+    document.getElementById("R2_ax12_12_pos").innerHTML = R2_ax12_12_pos;
     }
   }
-  
+
   /*Page ASSERV R1*/
