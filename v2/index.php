@@ -1016,7 +1016,7 @@
   </section>
     <section class="tab" id="balise" data-active="inactive">
       
-      <img src="/img/image.jpg" alt="">
+      <img src="/img/image.jpg" alt="" style="width: 50vw; aspect-ratio: 3/2;">
     </section>
   </main>
 </body>
