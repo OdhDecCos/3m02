@@ -48,7 +48,7 @@
 <body>
   <?php
   $user = 'root';
-  $password = 'root';
+  $password = 'Take1Vid';
   $db = 'sudriabotik';
   $host = 'localhost';
   $port = 3307;
