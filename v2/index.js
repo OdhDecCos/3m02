@@ -1,3 +1,8 @@
+setInterval(function() {
+  var myImageElement = document.getElementById('testImage');
+  myImageElement.src = '/img/image.jpg?rand=' + Math.random();
+}, 1000);
+
 function tab(event, tab) {
     let tabs = document.getElementsByClassName("tab");
     for (i = 0; i < tabs.length; i++) {

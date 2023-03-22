@@ -1016,7 +1016,7 @@
   </section>
     <section class="tab" id="balise" data-active="inactive">
       
-      <img src="/img/image.jpg?=<?php echo filemtime("/img/image.jpg")?>" alt="" style="width: 50vw;">
+      <img id="testImage" src="/img/image.jpg" alt="" style="width: 50vw;">
     </section>
   </main>
 </body>
