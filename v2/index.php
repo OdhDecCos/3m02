@@ -1016,21 +1016,7 @@
   </section>
     <section class="tab" id="balise" data-active="inactive">
       
-      <div id="container-image-info" style="background-color: white;">
-
-      <?php
-        if(array_key_exists('ax12', $_POST)) {
-            ax12();
-        }
-        function ax12() {
-            echo "ax12";
-        }
-    ?>
-        <form method="post">
-          Position: <input type="number" name="position"><br>
-          <input type="submit" name="ax12">
-        </form>
-      </div>
+      <img src="/img/image.jpg" alt="">
     </section>
   </main>
 </body>
