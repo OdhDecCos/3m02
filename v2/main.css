@@ -134,7 +134,7 @@ h1 {
     background-color: pink;
 }
 
-#container-synthese-info {
+.container-synthese-info {
     width: 30vw;
     height: 33vw;
     border: 2px solid var(--couleur-bordure);
@@ -164,14 +164,14 @@ h1 {
     text-align: center;
 }
 
-#container-synthese-info p {
+.container-synthese-info p {
     position: relative;
     font-size: 1.5vw;
     font-weight: bold;
     color: white;
 }
 
-#container-synthese-info p[data-active="active"]::before {
+.container-synthese-info p[data-active="active"]::before {
     background-color: lime;
 }
 
@@ -208,4 +208,24 @@ h1 {
     width: 5vw;
     border: 1px solid var(--couleur-bordure);
     border-radius: 5px;
+}
+
+.image-container {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 90%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    margin: 2em;
+}
+
+#container-image-info {
+    display: flex;
+    width: 50vw;
 }

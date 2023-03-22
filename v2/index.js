@@ -26,22 +26,46 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
     var dataR1 = new google.visualization.DataTable();
     var dataR2 = new google.visualization.DataTable();
+    var dataR3 = new google.visualization.DataTable();
+    var dataR4 = new google.visualization.DataTable();
     dataR1.addColumn('number', 'DateTime');
-    dataR1.addColumn('number', 'R1.pos_odom.X');
+    dataR1.addColumn('number', 'R1.pos_odom.X');/*
     dataR1.addColumn('number', 'R1.pos_odom.Y');
-    dataR1.addColumn('number', 'R1.pos_odom.Theta');
+    dataR1.addColumn('number', 'R1.pos_odom.Theta');*/
     dataR2.addColumn('number', 'DateTime');
-    dataR2.addColumn('number', 'R2.pos_odom.X');
+    dataR2.addColumn('number', 'R2.pos_odom.X');/*
     dataR2.addColumn('number', 'R2.pos_odom.Y');
-    dataR2.addColumn('number', 'R2.pos_odom.Theta');
-    for (i = 1; i <= my_2d.length; i++) {
+    dataR2.addColumn('number', 'R2.pos_odom.Theta');*/
+    dataR3.addColumn('number', 'DateTime');
+    dataR3.addColumn('number', 'R1.pos_odom.X');/*
+    dataR3.addColumn('number', 'R1.pos_odom.Y');
+    dataR3.addColumn('number', 'R1.pos_odom.Theta');*/
+    dataR4.addColumn('number', 'DateTime');
+    dataR4.addColumn('number', 'R2.pos_odom.X');/*
+    dataR4.addColumn('number', 'R2.pos_odom.Y');
+    dataR4.addColumn('number', 'R2.pos_odom.Theta');*/
+    let r1 = [1, 1, 3, 3, 2, 2, 4, 4, 1, 1];
+    let r2 = [2, 5, 5, 3, 3, 2, 2, 4, 4, 1];
+    let r3 = [2, 2, 6, 6, 1, 1, 1, 2, 2, 4];
+    let r4 = [5, 5, 5, 3, 3, 4, 4, 4, 1, 1];
+    /*for (i = 1; i <= my_2d.length; i++) {
         dataR1.addRow([i, parseInt(my_2d[my_2d.length - i][1]), parseInt(my_2d[my_2d.length - i][2]), parseInt(my_2d[my_2d.length - i][3])]);
         dataR2.addRow([i, parseInt(my_2d[my_2d.length - i][4]), parseInt(my_2d[my_2d.length - i][5]), parseInt(my_2d[my_2d.length - i][6])]);
+        dataR3.addRow([i, parseInt(my_2d[my_2d.length - i][1]), parseInt(my_2d[my_2d.length - i][2]), parseInt(50 - my_2d[my_2d.length - i][3])]);
+        dataR4.addRow([i, parseInt(my_2d[my_2d.length - i][4]), parseInt(my_2d[my_2d.length - i][5]), parseInt(50 - my_2d[my_2d.length - i][6])]);
+    }*/
+
+    for (i = 1; i <= my_2d.length; i++) {
+      dataR1.addRow([i, r1[i]]);
+      dataR2.addRow([i, r2[i]]);
+      dataR3.addRow([i, r3[i]]);
+      dataR4.addRow([i, r4[i]]);
     }
+
+    dataR1.addRow()
         
     var options = {
-        title: 'Positions',
-        curveType: 'function',
+        title: 'Moteur 1',
         width: 350,
         height: 250,
         legend: {
@@ -51,12 +75,15 @@ function drawChart() {
 
     var chartR1 = new google.visualization.LineChart(document.getElementById('chartR1'));
     chartR1.draw(dataR1, options);
+    options.title = "Angle";
     var chartR2 = new google.visualization.LineChart(document.getElementById('chartR2'));
     chartR2.draw(dataR2, options);
+    options.title = "Moteur 2";
     var chartR3 = new google.visualization.LineChart(document.getElementById('chartR3'));
-    chartR3.draw(dataR1, options);
+    chartR3.draw(dataR3, options);
+    options.title = "Vitesse";
     var chartR4 = new google.visualization.LineChart(document.getElementById('chartR4'));
-    chartR4.draw(dataR2, options);
+    chartR4.draw(dataR4, options);
 }
 
 

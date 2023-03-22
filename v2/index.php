@@ -104,21 +104,21 @@
           echo '<div class="robot" id="robot-R2" style="left: calc(' . floor($row[4] / 3) . '% - 2.5vw);top: calc(' . floor($row[5] / 2) . '% - 2.5vw);transform: rotate(' . $row[6] . 'deg);">R2</div>';
           echo '<div class="robot adv" id="robot-R1-adv" style="left: calc(' . floor($row[7] / 3) . '% - 2.5vw);top: calc(' . floor($row[8] / 2) . '% - 2.5vw);">R3</div>';
           echo '<div class="robot adv" id="robot-R2-adv" style="left: calc(' . floor($row[9] / 3) . '% - 2.5vw);top: calc(' . floor($row[10] / 2) . '% - 2.5vw);">R4</div>';
-          //echo '<div style="left: calc('.floor($row[11]/3).'% - 2%);top: calc('.floor($row[12]/2).'% - 3%);" class="element '.$row[13].'"></div>';
-          //echo '<div style="left: calc('.floor($row[14]/3).'% - 2%);top: calc('.floor($row[15]/2).'% - 3%);" class="element '.$row[16].'"></div>';
-          //echo '<div style="left: calc('.floor($row[17]/3).'% - 2%);top: calc('.floor($row[18]/2).'% - 3%);" class="element '.$row[19].'"></div>';
+          echo '<div style="left: calc('.floor($row[11]/3).'% - 2%);top: calc('.floor($row[12]/2).'% - 3%);" class="element '.$row[13].'"></div>';
+          echo '<div style="left: calc('.floor($row[14]/3).'% - 2%);top: calc('.floor($row[15]/2).'% - 3%);" class="element '.$row[16].'"></div>';
+          echo '<div style="left: calc('.floor($row[17]/3).'% - 2%);top: calc('.floor($row[18]/2).'% - 3%);" class="element '.$row[19].'"></div>';
           echo '<div style="left: calc(' . floor($row[20] / 3) . '% - 2%);top: calc(' . floor($row[21] / 2) . '% - 3%);" class="element ' . $row[22] . '"></div>';
-          //echo '<div style="left: calc('.floor($row[23]/3).'% - 2%);top: calc('.floor($row[24]/2).'% - 3%);" class="element '.$row[25].'"></div>';
-          //echo '<div style="left: calc('.floor($row[26]/3).'% - 2%);top: calc('.floor($row[27]/2).'% - 3%);" class="element '.$row[28].'"></div>';
-          //echo '<div style="left: calc('.floor($row[29]/3).'% - 2%);top: calc('.floor($row[30]/2).'% - 3%);" class="element '.$row[31].'"></div>';
+          echo '<div style="left: calc('.floor($row[23]/3).'% - 2%);top: calc('.floor($row[24]/2).'% - 3%);" class="element '.$row[25].'"></div>';
+          echo '<div style="left: calc('.floor($row[26]/3).'% - 2%);top: calc('.floor($row[27]/2).'% - 3%);" class="element '.$row[28].'"></div>';
+          echo '<div style="left: calc('.floor($row[29]/3).'% - 2%);top: calc('.floor($row[30]/2).'% - 3%);" class="element '.$row[31].'"></div>';
           echo '<div style="left: calc(' . floor($row[32] / 3) . '% - 2%);top: calc(' . floor($row[33] / 2) . '% - 3%);" class="element ' . $row[34] . '"></div>';
-          //echo '<div style="left: calc('.floor($row[35]/3).'% - 2%);top: calc('.floor($row[36]/2).'% - 3%);" class="element '.$row[37].'"></div>';
-          //echo '<div style="left: calc('.floor($row[38]/3).'% - 2%);top: calc('.floor($row[39]/2).'% - 3%);" class="element '.$row[40].'"></div>';
-          //echo '<div style="left: calc('.floor($row[41]/3).'% - 2%);top: calc('.floor($row[42]/2).'% - 3%);" class="element '.$row[43].'"></div>';
+          echo '<div style="left: calc('.floor($row[35]/3).'% - 2%);top: calc('.floor($row[36]/2).'% - 3%);" class="element '.$row[37].'"></div>';
+          echo '<div style="left: calc('.floor($row[38]/3).'% - 2%);top: calc('.floor($row[39]/2).'% - 3%);" class="element '.$row[40].'"></div>';
+          echo '<div style="left: calc('.floor($row[41]/3).'% - 2%);top: calc('.floor($row[42]/2).'% - 3%);" class="element '.$row[43].'"></div>';
           echo '<div style="left: calc(' . floor($row[44] / 3) . '% - 2%);top: calc(' . floor($row[45] / 2) . '% - 3%);" class="element ' . $row[46] . '"></div>';
           ?>
         </div>
-        <div id="container-synthese-info">
+        <div class="container-synthese-info">
           <div class="infos">
             <div class="positions">
               <p>R1: X=<?php echo $row[1] . ", Y=" . $row[2] . ", Theta=" . $row[3]; ?></p>
@@ -770,7 +770,7 @@
         </div>
       </div>
     </section>
-    <section class="tab" id="R1-asserv" data-active="active">
+    <section class="tab" id="R1-asserv" data-active="inactive">
     <div class="flex w-screen h-screen">
       <div class="w-1/2 p-5 bg-gray-700 flex flex-col gap-3">
         <div class="w-full flex flex-col justify-center card">
@@ -780,25 +780,25 @@
           <div class="flex flex-row justify-between">
             <div class="parametre">
               <label for="entraxe" class="font-bold">Entraxe (mm)</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_entraxe" value="10">
             </div>
             <div class="parametre">
               <label for="entraxe" class="font-bold">Diametre_motrice</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_diametre_motrice" value="10">
             </div>
             <div class="parametre">
-              <label for="entraxe" class="font-bold">Perimetre (mm)</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <label for="entraxe" class="font-bold">Perimetre_roue (mm)</label>
+              <input class="w-12" type="text" id="R1_perimetre_roue" value="10">
             </div>
           </div>
-          <div class="flex flex-row">
+          <div class="flex flex-row justify-evenly">
             <div class="parametre">
               <label for="entraxe" class="font-bold">Coeff_gauche</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_coeff_gauche" value="10">
             </div>
             <div class="parametre">
               <label for="entraxe" class="font-bold">Coeff_droite</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_coeff_droite" value="10">
             </div>
           </div>
         </div>
@@ -809,166 +809,177 @@
           <div class="flex flex-row justify-between">
             <div class="parametre">
               <label for="entraxe" class="font-bold">Max_integrale_blocage</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_max_integrale_blocage" value="">
             </div>
             <div class="parametre">
-              <label for="entraxe" class="font-bold">Max_erreur integral_v</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <label for="entraxe" class="font-bold">Max_erreur_integrale</label>
+              <input class="w-12" type="text" id="R1_max_erreur_integrale" value="">
             </div>
             <div class="parametre">
               <label for="entraxe" class="font-bold">Seuil_immobilite</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
+              <input class="w-12" type="text" id="R1_seuil_immobilite" value="">
             </div>
           </div>
         </div>
-      <div class="flex gap-4">
-        <div class="w-3/5 flex flex-col card">
-          <div class="rounded w-full flex justify-center bg-blue-500">
-            <p class="font-bold">Asservissement_distance</p>
-          </div>
-          <div class="flex flex-row">
-            <div class="flex flex-col w-1/2">
+        <div class="flex gap-4">
+          <div class="w-1/2 flex flex-col card">
+            <div class="rounded w-full flex justify-center bg-blue-500">
+              <p class="font-bold">Asservissement_distance</p>
+            </div>
+            <div class="flex flex-row justify-between">
               <div class="parametre">
-                <label for="entraxe" class="font-bold">Vitesse_consigne_max</label>
-                <input class="w-10" type="text" id="entraxe" value="44">
+                <p for="entraxe" class="font-bold">Vitesse_consigne_max</p>
               </div>
               <div class="parametre">
-                <label for="entraxe" class="font-bold">Vitesse_distance_min</label>
-                <input class="w-10" type="text" id="entraxe" value="44">
+                <p for="entraxe" class="font-bold">Vitesse_distance_min</p>
               </div>
             </div>
-            <div class="flex flex-col w-1/2">
+            <div class="flex flex-row justify-between ">
+                <input class="w-40" type="text" name="Vitesse_consigne_max" id="R1_vitesse_consigne_max" value="">
+                <input class="w-40" type="text" id="R1_vitesse_distance_min" value="">
+            </div>
+            <div class="flex flex-row justify-between">
               <div class="parametre">
-                <label for="entraxe" class="font-bold">Vitesse_max_tension</label>
-                <input class="w-10" type="text" id="entraxe" value="44">
+                <p for="entraxe" class="font-bold">Vitesse_max_tension</p>
               </div>
               <div class="parametre">
-                <label for="entraxe" class="font-bold">Distance_consigne</label>
-                <input class="w-10" type="text" id="entraxe" value="44">
+                <p for="entraxe" class="font-bold">Distance_consigne</p>
+              </div>
+            </div>
+            <div class="flex flex-row justify-between">
+              <input class="w-40" type="text" id="R1_vitesse_max_tension" value="">
+              <input class="w-40" type="text" id="R1_distance_consigne" value="">
+            </div>
+          </div>
+          <div class="w-1/2 flex flex-col card">
+            <div class="rounded w-full flex justify-center bg-blue-500">
+              <p class="font-bold">Asservissement_angle</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Vitesse_angle_max</p>
+              </div>
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Vitesse_angle_min</p>
+              </div>
+            </div>
+            <div class="flex flex-row justify-between">
+                <input class="w-40" type="text" id="R1_vitesse_angle_max" value="">
+                <input class="w-40" type="text" id="R1_Vitesse_angle_min" value="">
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <p for="entraxe" class="font-bold">Orientation_consigne_deg</p>
+              </div>
+            </div>
+            <div class="flex flex-row">
+              <input class="w-40" type="text" id="R1_orientation_consigne" value="">
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 grid-rows-2 gap-4 my-2">
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Vitesse</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R1_vitesse_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R1_vitesse_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R1_vitesse_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Orientation</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R1_orientation_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R1_orientation_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R1_orientation_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Position</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R1_position_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R1_position_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R1_position_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Blocage</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R1_blocage_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R1_blocage_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R1_blocage_D" value="">
+              </div>
+            </div>
+          </div>
+          <div class="w-full justify-center card">
+            <div class="rounded flex justify-center bg-violet-500">
+              <p class="font-bold">PID_Hybride</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">P</label>
+                <input class="w-9" type="text" id="R1_hybride_P" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">I</label>
+                <input class="w-9" type="text" id="R1_hybride_I" value="">
+              </div>
+              <div class="parametre">
+                <label for="entraxe" class="font-bold">D</label>
+                <input class="w-9" type="text" id="R1_hybride_D" value="">
               </div>
             </div>
           </div>
         </div>
-        <div class="w-2/5 flex flex-col card">
-          <div class="rounded w-full flex justify-center bg-blue-500">
-            <p class="font-bold">Asservissement_angle</p>
-          </div>
-          <div class="flex flex-col">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">Vitesse_angle_max</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">Vitesse_angle_min</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">Orientation_consigne_deg</label>
-              <input class="w-10" type="text" id="entraxe" value="44">
-            </div>
-          </div>
+        <div class="w-full flex flex-row justify-between card mt-6">
+          <a href="aide_asserv_R1R2.html" target="_blank" class="btn">Aide</a>
+          <button class="btn" type="reset">Effacer</button>
+          <button class="btn" onclick="fct35()" type="button">Modifier</button>
+          <button class="btn" onclick="fct()" type="button">Valider</button>
         </div>
-      </div>
-      <div class="grid grid-cols-3 grid-rows-2 gap-4 my-2">
-        <div class="w-full justify-center card">
-          <div class="rounded flex justify-center bg-violet-500">
-            <p class="font-bold">PID_Vitesse</p>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">P</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">I</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">D</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-          </div>
-        </div>
-        <div class="w-full justify-center card">
-          <div class="rounded flex justify-center bg-violet-500">
-            <p class="font-bold">PID_Orientation</p>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">P</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">I</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">D</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-          </div>
-        </div>
-        <div class="w-full justify-center card">
-          <div class="rounded flex justify-center bg-violet-500">
-            <p class="font-bold">PID_Position</p>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">P</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">I</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">D</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-          </div>
-        </div>
-        <div class="w-full justify-center card">
-          <div class="rounded flex justify-center bg-violet-500">
-            <p class="font-bold">PID_Blocage</p>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">P</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">I</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">D</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-          </div>
-        </div>
-        <div class="w-full justify-center card">
-          <div class="rounded flex justify-center bg-violet-500">
-            <p class="font-bold">PID_Hybride</p>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">P</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">I</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-            <div class="parametre">
-              <label for="entraxe" class="font-bold">D</label>
-              <input class="w-8" type="text" id="entraxe" value="44">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full flex flex-col justify-center card">
-          <p class="w-16">bouton</p>
-      </div>
 
       </div>
       <div class="w-1/2 p-5 bg-gray-900 flex flex-col gap-4">
@@ -977,7 +988,7 @@
             <p class="font-bold">courbe vitesse</p>
           </div>
         </div>
-        <div class="h-3/4 flex flex-wrap justify-center items-center gap-1 card">
+        <div class="h-3/4 flex flex-wrap justify-center gap-1 items-center flex-col card">
           <div id="chartR1"></div>
           <div id="chartR2"></div>
           <div id="chartR3"></div>
@@ -993,6 +1004,7 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
   <section class="tab" id="R2-asserv" data-active="inactive">
     <div class="flex w-screen h-screen">
@@ -1003,7 +1015,22 @@
     </div>
   </section>
     <section class="tab" id="balise" data-active="inactive">
-      <h1>balise</h1>
+      
+      <div id="container-image-info" style="background-color: white;">
+
+      <?php
+        if(array_key_exists('ax12', $_POST)) {
+            ax12();
+        }
+        function ax12() {
+            echo "ax12";
+        }
+    ?>
+        <form method="post">
+          Position: <input type="number" name="position"><br>
+          <input type="submit" name="ax12">
+        </form>
+      </div>
     </section>
   </main>
 </body>
