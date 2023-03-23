@@ -1014,7 +1014,7 @@
       </div>
     </div>
   </section>
-    <section class="tab" id="balise" data-active="inactive">
+    <section class="tab flex justify-center items-center" id="balise" data-active="inactive">
       
       <img id="testImage" src="/img/image.jpg" alt="" style="width: 50vw;">
     </section>
