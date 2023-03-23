@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Mar 23, 2023 at 03:16 PM
+-- Generation Time: Mar 23, 2023 at 04:39 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -190,7 +190,7 @@ CREATE TABLE `robots` (
   `B_R1_pos_theta` int(11) NOT NULL,
   `B_R2_pos_X` int(11) NOT NULL,
   `B_R2_pos_Y` int(11) NOT NULL,
-  `B_R2_pos_Theta` int(11) NOT NULL,
+  `B_R2_pos_theta` int(11) NOT NULL,
   `B_R1ADV_pos_X` int(11) NOT NULL,
   `B_R1ADV_pos_Y` int(11) NOT NULL,
   `B_R1ADV_pos_theta` int(11) NOT NULL,
@@ -204,7 +204,7 @@ CREATE TABLE `robots` (
 -- Dumping data for table `robots`
 --
 
-INSERT INTO `robots` (`time`, `B_R1_pos_X`, `B_R1_pos_Y`, `B_R1_pos_theta`, `B_R2_pos_X`, `B_R2_pos_Y`, `B_R2_pos_Theta`, `B_R1ADV_pos_X`, `B_R1ADV_pos_Y`, `B_R1ADV_pos_theta`, `B_R2ADV_pos_X`, `B_R2ADV_pos_Y`, `B_R2ADV_pos_theta`, `id`) VALUES
+INSERT INTO `robots` (`time`, `B_R1_pos_X`, `B_R1_pos_Y`, `B_R1_pos_theta`, `B_R2_pos_X`, `B_R2_pos_Y`, `B_R2_pos_theta`, `B_R1ADV_pos_X`, `B_R1ADV_pos_Y`, `B_R1ADV_pos_theta`, `B_R2ADV_pos_X`, `B_R2ADV_pos_Y`, `B_R2ADV_pos_theta`, `id`) VALUES
 ('2023-03-23 15:32:33', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),
 ('2023-03-23 15:32:43', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2),
 ('2023-03-23 15:32:48', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3),
