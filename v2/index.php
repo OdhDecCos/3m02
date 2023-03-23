@@ -48,7 +48,7 @@
 <body>
   <?php
   $user = 'root';
-  $password = 'Take1Vid';
+  $password = 'root';
   $db = 'sudriabotik';
   $host = 'localhost';
   $port = 3307;
@@ -92,37 +92,63 @@
       <div class="synthese-container">
         <div id="plateau">
           <?php
-          if ($result = $link->query("SELECT * FROM `test` ORDER BY `time` DESC LIMIT 1")) {
+          if ($result = $link->query("SELECT * FROM `robots` ORDER BY `time` DESC LIMIT 1")) {
             $row = $result->fetch_row();
             $result->close();
           }
+          $pos_robots = array();
+          $pos_robots["R1_X"] = $row[1];
+          $pos_robots["R1_Y"] = $row[2];
+          $pos_robots["R1_theta"] = $row[3];
+          $pos_robots["R2_X"] = $row[4];
+          $pos_robots["R2_Y"] = $row[5];
+          $pos_robots["R2_theta"] = $row[6];
+
+          if ($result = $link->query("SELECT * FROM `objets` ORDER BY `time` DESC LIMIT 1")) {
+            $row = $result->fetch_row();
+            $result->close();
+          }
+          $pos_elements = array();
+          $pos_elements["E1_X"] = $row[1];
+          $pos_elements["E1_Y"] = $row[2];
+          $pos_elements["E1_couleur"] = $row[3];
+          $pos_elements["E2_X"] = $row[4];
+          $pos_elements["E2_Y"] = $row[5];
+          $pos_elements["E2_couleur"] = $row[6];
+          $pos_elements["E3_X"] = $row[1];
+          $pos_elements["E3_Y"] = $row[2];
+          $pos_elements["E3_couleur"] = $row[3];
+          $pos_elements["E4_X"] = $row[4];
+          $pos_elements["E4_Y"] = $row[5];
+          $pos_elements["E4_couleur"] = $row[6];
+          $pos_elements["E5_X"] = $row[1];
+          $pos_elements["E5_Y"] = $row[2];
+          $pos_elements["E5_couleur"] = $row[3];
+          $pos_elements["E6_X"] = $row[4];
+          $pos_elements["E6_Y"] = $row[5];
+          $pos_elements["E6_couleur"] = $row[6];
+
           echo '<div class="depart" id="D1" style="left:0; top:calc(50% - 2.5vw);"></div>';
           echo '<div class="depart" id="D2" style="left:calc(50% - 2.5vw); top:0;"></div>';
           echo '<div class="depart" id="D3" style="left:calc(100% - 5vw); top:calc(50% - 2.5vw);"></div>';
           echo '<div class="depart" id="D4" style="left:calc(50% - 2.5vw); top:calc(100% - 5vw);"></div>';
-          echo '<div class="robot" id="robot-R1" style="left: calc(' . floor($row[1] / 3) . '% - 2.5vw);top: calc(' . floor($row[2] / 2) . '% - 2.5vw);transform: rotate(' . $row[3] . 'deg);">R1</div>';
-          echo '<div class="robot" id="robot-R2" style="left: calc(' . floor($row[4] / 3) . '% - 2.5vw);top: calc(' . floor($row[5] / 2) . '% - 2.5vw);transform: rotate(' . $row[6] . 'deg);">R2</div>';
-          echo '<div class="robot adv" id="robot-R1-adv" style="left: calc(' . floor($row[7] / 3) . '% - 2.5vw);top: calc(' . floor($row[8] / 2) . '% - 2.5vw);">R3</div>';
-          echo '<div class="robot adv" id="robot-R2-adv" style="left: calc(' . floor($row[9] / 3) . '% - 2.5vw);top: calc(' . floor($row[10] / 2) . '% - 2.5vw);">R4</div>';
-          echo '<div style="left: calc('.floor($row[11]/3).'% - 2%);top: calc('.floor($row[12]/2).'% - 3%);" class="element '.$row[13].'"></div>';
-          echo '<div style="left: calc('.floor($row[14]/3).'% - 2%);top: calc('.floor($row[15]/2).'% - 3%);" class="element '.$row[16].'"></div>';
-          echo '<div style="left: calc('.floor($row[17]/3).'% - 2%);top: calc('.floor($row[18]/2).'% - 3%);" class="element '.$row[19].'"></div>';
-          echo '<div style="left: calc(' . floor($row[20] / 3) . '% - 2%);top: calc(' . floor($row[21] / 2) . '% - 3%);" class="element ' . $row[22] . '"></div>';
-          echo '<div style="left: calc('.floor($row[23]/3).'% - 2%);top: calc('.floor($row[24]/2).'% - 3%);" class="element '.$row[25].'"></div>';
-          echo '<div style="left: calc('.floor($row[26]/3).'% - 2%);top: calc('.floor($row[27]/2).'% - 3%);" class="element '.$row[28].'"></div>';
-          echo '<div style="left: calc('.floor($row[29]/3).'% - 2%);top: calc('.floor($row[30]/2).'% - 3%);" class="element '.$row[31].'"></div>';
-          echo '<div style="left: calc(' . floor($row[32] / 3) . '% - 2%);top: calc(' . floor($row[33] / 2) . '% - 3%);" class="element ' . $row[34] . '"></div>';
-          echo '<div style="left: calc('.floor($row[35]/3).'% - 2%);top: calc('.floor($row[36]/2).'% - 3%);" class="element '.$row[37].'"></div>';
-          echo '<div style="left: calc('.floor($row[38]/3).'% - 2%);top: calc('.floor($row[39]/2).'% - 3%);" class="element '.$row[40].'"></div>';
-          echo '<div style="left: calc('.floor($row[41]/3).'% - 2%);top: calc('.floor($row[42]/2).'% - 3%);" class="element '.$row[43].'"></div>';
-          echo '<div style="left: calc(' . floor($row[44] / 3) . '% - 2%);top: calc(' . floor($row[45] / 2) . '% - 3%);" class="element ' . $row[46] . '"></div>';
+          echo '<div class="robot" id="robot-R1" style="left: calc(' . floor($pos_robots["R1_X"] / 3) . '% - 2.5vw);top: calc(' . floor($pos_robots["R1_Y"] / 2) . '% - 2.5vw);transform: rotate(' . $pos_robots["R1_theta"] . 'deg);">R1</div>';
+          echo '<div class="robot" id="robot-R2" style="left: calc(' . floor($pos_robots["R2_X"] / 3) . '% - 2.5vw);top: calc(' . floor($pos_robots["R2_Y"] / 2) . '% - 2.5vw);transform: rotate(' . $pos_robots["R2_theta"] . 'deg);">R2</div>';
+          /*echo '<div class="robot adv" id="robot-R1-adv" style="left: calc(' . floor(0 / 3) . '% - 2.5vw);top: calc(' . floor(0 / 2) . '% - 2.5vw);">R3</div>';
+          echo '<div class="robot adv" id="robot-R2-adv" style="left: calc(' . floor(0 / 3) . '% - 2.5vw);top: calc(' . floor(0 / 2) . '% - 2.5vw);">R4</div>';*/
+          echo '<div style="left: calc('.floor($pos_elements["E1_X"]/3).'% - 2%);top: calc('.floor($pos_elements["E1_Y"]/2).'% - 3%);" class="element '.$pos_elements["E1_couleur"].'"></div>';
+          echo '<div style="left: calc('.floor($pos_elements["E2_X"]/3).'% - 2%);top: calc('.floor($pos_elements["E2_Y"]/2).'% - 3%);" class="element '.$pos_elements["E2_couleur"].'"></div>';
+          echo '<div style="left: calc('.floor($pos_elements["E3_X"]/3).'% - 2%);top: calc('.floor($pos_elements["E3_Y"]/2).'% - 3%);" class="element '.$pos_elements["E3_couleur"].'"></div>';
+          echo '<div style="left: calc('.floor($pos_elements["E4_X"]/3).'% - 2%);top: calc('.floor($pos_elements["E4_Y"]/2).'% - 3%);" class="element '.$pos_elements["E4_couleur"]. '"></div>';
+          echo '<div style="left: calc('.floor($pos_elements["E5_X"]/3).'% - 2%);top: calc('.floor($pos_elements["E5_Y"]/2).'% - 3%);" class="element '.$pos_elements["E5_couleur"].'"></div>';
+          echo '<div style="left: calc('.floor($pos_elements["E6_X"]/3).'% - 2%);top: calc('.floor($pos_elements["E6_Y"]/2).'% - 3%);" class="element '.$pos_elements["E6_couleur"].'"></div>';
           ?>
         </div>
         <div class="container-synthese-info">
           <div class="infos">
             <div class="positions">
-              <p>R1: X=<?php echo $row[1] . ", Y=" . $row[2] . ", Theta=" . $row[3]; ?></p>
-              <p>R2: X=<?php echo $row[4] . ", Y=" . $row[5] . ", Theta=" . $row[6]; ?></p>
+              <p>R1: X=<?php echo $pos_robots["R1_X"] . ", Y=" . $pos_robots["R1_Y"] . ", Theta=" . $pos_robots["R1_theta"]; ?></p>
+              <p>R2: X=<?php echo $pos_robots["R2_X"] . ", Y=" . $pos_robots["R2_Y"] . ", Theta=" . $pos_robots["R2_theta"]; ?></p>
             </div>
             <div class="strat">
               <p data-active="active">Evitement</p>
@@ -146,17 +172,17 @@
                 <tbody>
                   <tr>
                     <td class="font-bold text-2xl">X_R1_odo</td>
-                    <td class="font-bold text-4xl text-center" name="R1_pos_odom_X" id="R1_pos_odom_X"><?php echo $row[1] ?></td>
+                    <td class="font-bold text-4xl text-center" name="R1_pos_odom_X" id="R1_pos_odom_X"><?php echo $pos_robots["R1_X"] ?></td>
                     <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R1_pos_odom_X_newvalue" id="R1_pos_odom_X_newvalue"></td>
                   </tr>
                   <tr>
                     <td class="font-bold text-2xl">Y_R1_odo</td>
-                    <td class="font-bold text-4xl text-center" name="R1_pos_odom_Y" id="R1_pos_odom_Y"><?php echo $row[2] ?></td>
+                    <td class="font-bold text-4xl text-center" name="R1_pos_odom_Y" id="R1_pos_odom_Y"><?php echo $pos_robots["R1_Y"] ?></td>
                     <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R1_pos_odom_Y_newvalue" id="R1_pos_odom_Y_newvalue"></td>
                   </tr>
                   <tr>
                     <td class="font-bold text-2xl">Theta</td>
-                    <td class="font-bold text-4xl text-center" name="R1_pos_odom_Theta" id="R1_pos_odom_Theta"><?php echo $row[3] ?></td>
+                    <td class="font-bold text-4xl text-center" name="R1_pos_odom_Theta" id="R1_pos_odom_Theta"><?php echo $pos_robots["R1_theta"] ?></td>
                     <td><input type="text" class="h-8 w-full rounded" placeholder="New value" name="R1_pos_odom_Theta_newvalue" id="R1_pos_odom_Theta_newvalue"></td>
                     <td class="text-center"><button type="reset" class="btn">Clear</button></td>
                   </tr>
