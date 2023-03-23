@@ -48,7 +48,7 @@
 <body>
   <?php
   $user = 'root';
-  $password = 'root';
+  $password = 'Take1Vid';
   $db = 'sudriabotik';
   $host = 'localhost';
   $port = 3307;
@@ -115,18 +115,18 @@
           $pos_elements["E2_X"] = $row[4];
           $pos_elements["E2_Y"] = $row[5];
           $pos_elements["E2_couleur"] = $row[6];
-          $pos_elements["E3_X"] = $row[1];
-          $pos_elements["E3_Y"] = $row[2];
-          $pos_elements["E3_couleur"] = $row[3];
-          $pos_elements["E4_X"] = $row[4];
-          $pos_elements["E4_Y"] = $row[5];
-          $pos_elements["E4_couleur"] = $row[6];
-          $pos_elements["E5_X"] = $row[1];
-          $pos_elements["E5_Y"] = $row[2];
-          $pos_elements["E5_couleur"] = $row[3];
-          $pos_elements["E6_X"] = $row[4];
-          $pos_elements["E6_Y"] = $row[5];
-          $pos_elements["E6_couleur"] = $row[6];
+          $pos_elements["E3_X"] = $row[7];
+          $pos_elements["E3_Y"] = $row[8];
+          $pos_elements["E3_couleur"] = $row[9];
+          $pos_elements["E4_X"] = $row[10];
+          $pos_elements["E4_Y"] = $row[11];
+          $pos_elements["E4_couleur"] = $row[12];
+          $pos_elements["E5_X"] = $row[13];
+          $pos_elements["E5_Y"] = $row[14];
+          $pos_elements["E5_couleur"] = $row[15];
+          $pos_elements["E6_X"] = $row[16];
+          $pos_elements["E6_Y"] = $row[17];
+          $pos_elements["E6_couleur"] = $row[18];
 
           echo '<div class="depart" id="D1" style="left:0; top:calc(50% - 2.5vw);"></div>';
           echo '<div class="depart" id="D2" style="left:calc(50% - 2.5vw); top:0;"></div>';
