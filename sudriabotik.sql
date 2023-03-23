@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Mar 22, 2023 at 02:53 PM
+-- Generation Time: Mar 23, 2023 at 02:13 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -140,6 +140,56 @@ INSERT INTO `moteurs` (`time`, `R1_moteur_1_pwm`, `R1_moteur_1_dir`, `R1_moteur_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `objets`
+--
+
+CREATE TABLE `objets` (
+  `time` datetime NOT NULL,
+  `B_E1_pos_X` int(11) NOT NULL,
+  `B_E1_pos_Y` int(11) NOT NULL,
+  `B_E1_pos_theta` varchar(6) NOT NULL,
+  `B_E2_pos_X` int(11) NOT NULL,
+  `B_E2_pos_Y` int(11) NOT NULL,
+  `B_E2_pos_theta` varchar(6) NOT NULL,
+  `B_E3_pos_X` int(11) NOT NULL,
+  `B_E3_pos_Y` int(11) NOT NULL,
+  `B_E3_pos_theta` varchar(6) NOT NULL,
+  `B_E4_pos_X` int(11) NOT NULL,
+  `B_E4_pos_Y` int(11) NOT NULL,
+  `B_E4_pos_theta` varchar(6) NOT NULL,
+  `B_E5_pos_X` int(11) NOT NULL,
+  `B_E5_pos_Y` int(11) NOT NULL,
+  `B_E5_pos_theta` varchar(6) NOT NULL,
+  `B_E6_pos_X` int(11) NOT NULL,
+  `B_E6_pos_Y` int(11) NOT NULL,
+  `B_E6_pos_theta` varchar(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `robots`
+--
+
+CREATE TABLE `robots` (
+  `time` datetime NOT NULL,
+  `B_R1_pos_X` int(11) NOT NULL,
+  `B_R1_pos_Y` int(11) NOT NULL,
+  `B_R1_pos_theta` int(11) NOT NULL,
+  `B_R2_pos_X` int(11) NOT NULL,
+  `B_R2_pos_Y` int(11) NOT NULL,
+  `B_R2_pos_Theta` int(11) NOT NULL,
+  `B_R1ADV_pos_X` int(11) NOT NULL,
+  `B_R1ADV_pos_Y` int(11) NOT NULL,
+  `B_R1ADV_pos_theta` int(11) NOT NULL,
+  `B_R2ADV_pos_X` int(11) NOT NULL,
+  `B_R2ADV_pos_Y` int(11) NOT NULL,
+  `B_R2ADV_pos_theta` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `test`
 --
 
@@ -223,6 +273,18 @@ ALTER TABLE `gpio`
 -- Indexes for table `moteurs`
 --
 ALTER TABLE `moteurs`
+  ADD PRIMARY KEY (`time`);
+
+--
+-- Indexes for table `objets`
+--
+ALTER TABLE `objets`
+  ADD PRIMARY KEY (`time`);
+
+--
+-- Indexes for table `robots`
+--
+ALTER TABLE `robots`
   ADD PRIMARY KEY (`time`);
 
 --
