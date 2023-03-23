@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Mar 23, 2023 at 02:13 PM
+-- Generation Time: Mar 23, 2023 at 03:16 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -147,23 +147,35 @@ CREATE TABLE `objets` (
   `time` datetime NOT NULL,
   `B_E1_pos_X` int(11) NOT NULL,
   `B_E1_pos_Y` int(11) NOT NULL,
-  `B_E1_pos_theta` varchar(6) NOT NULL,
+  `B_E1_couleur` varchar(6) NOT NULL,
   `B_E2_pos_X` int(11) NOT NULL,
   `B_E2_pos_Y` int(11) NOT NULL,
-  `B_E2_pos_theta` varchar(6) NOT NULL,
+  `B_E2_couleur` varchar(6) NOT NULL,
   `B_E3_pos_X` int(11) NOT NULL,
   `B_E3_pos_Y` int(11) NOT NULL,
-  `B_E3_pos_theta` varchar(6) NOT NULL,
+  `B_E3_couleur` varchar(6) NOT NULL,
   `B_E4_pos_X` int(11) NOT NULL,
   `B_E4_pos_Y` int(11) NOT NULL,
-  `B_E4_pos_theta` varchar(6) NOT NULL,
+  `B_E4_couleur` varchar(6) NOT NULL,
   `B_E5_pos_X` int(11) NOT NULL,
   `B_E5_pos_Y` int(11) NOT NULL,
-  `B_E5_pos_theta` varchar(6) NOT NULL,
+  `B_E5_couleur` varchar(6) NOT NULL,
   `B_E6_pos_X` int(11) NOT NULL,
   `B_E6_pos_Y` int(11) NOT NULL,
-  `B_E6_pos_theta` varchar(6) NOT NULL
+  `B_E6_couleur` varchar(6) NOT NULL,
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `objets`
+--
+
+INSERT INTO `objets` (`time`, `B_E1_pos_X`, `B_E1_pos_Y`, `B_E1_couleur`, `B_E2_pos_X`, `B_E2_pos_Y`, `B_E2_couleur`, `B_E3_pos_X`, `B_E3_pos_Y`, `B_E3_couleur`, `B_E4_pos_X`, `B_E4_pos_Y`, `B_E4_couleur`, `B_E5_pos_X`, `B_E5_pos_Y`, `B_E5_couleur`, `B_E6_pos_X`, `B_E6_pos_Y`, `B_E6_couleur`, `id`) VALUES
+('2023-03-23 15:34:33', 0, 0, 'jaune', 0, 0, 'jaune', 0, 0, 'marron', 0, 0, 'marron', 0, 0, 'rose', 0, 0, 'rose', 1),
+('2023-03-23 15:34:52', 0, 0, 'jaune', 0, 0, 'jaune', 0, 0, 'marron', 0, 0, 'marron', 0, 0, 'rose', 0, 0, 'rose', 2),
+('2023-03-23 15:34:59', 0, 0, 'jaune', 0, 0, 'jaune', 0, 0, 'marron', 0, 0, 'marron', 0, 0, 'rose', 0, 0, 'rose', 3),
+('2023-03-23 15:35:07', 0, 0, 'jaune', 0, 0, 'jaune', 0, 0, 'marron', 0, 0, 'marron', 0, 0, 'rose', 0, 0, 'rose', 4),
+('2023-03-23 15:35:23', 0, 0, 'jaune', 0, 0, 'jaune', 0, 0, 'marron', 0, 0, 'marron', 0, 0, 'rose', 0, 0, 'rose', 5);
 
 -- --------------------------------------------------------
 
@@ -184,8 +196,20 @@ CREATE TABLE `robots` (
   `B_R1ADV_pos_theta` int(11) NOT NULL,
   `B_R2ADV_pos_X` int(11) NOT NULL,
   `B_R2ADV_pos_Y` int(11) NOT NULL,
-  `B_R2ADV_pos_theta` int(11) NOT NULL
+  `B_R2ADV_pos_theta` int(11) NOT NULL,
+  `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `robots`
+--
+
+INSERT INTO `robots` (`time`, `B_R1_pos_X`, `B_R1_pos_Y`, `B_R1_pos_theta`, `B_R2_pos_X`, `B_R2_pos_Y`, `B_R2_pos_Theta`, `B_R1ADV_pos_X`, `B_R1ADV_pos_Y`, `B_R1ADV_pos_theta`, `B_R2ADV_pos_X`, `B_R2ADV_pos_Y`, `B_R2ADV_pos_theta`, `id`) VALUES
+('2023-03-23 15:32:33', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),
+('2023-03-23 15:32:43', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2),
+('2023-03-23 15:32:48', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3),
+('2023-03-23 15:32:53', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4),
+('2023-03-23 15:50:38', 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5);
 
 -- --------------------------------------------------------
 
