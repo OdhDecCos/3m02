@@ -103,6 +103,12 @@
           $pos_robots["R2_X"] = $row[4];
           $pos_robots["R2_Y"] = $row[5];
           $pos_robots["R2_theta"] = $row[6];
+          $pos_robots["R1ADV_X"] = $row[7];
+          $pos_robots["R1ADV_Y"] = $row[8];
+          $pos_robots["R1ADV_theta"] = $row[9];
+          $pos_robots["R2ADV_X"] = $row[10];
+          $pos_robots["R2ADV_Y"] = $row[11];
+          $pos_robots["R2ADV_theta"] = $row[12];
 
           if ($result = $link->query("SELECT * FROM `objets` ORDER BY `time` DESC LIMIT 1")) {
             $row = $result->fetch_row();
@@ -133,9 +139,9 @@
           echo '<div class="depart" id="D3" style="left:calc(100% - 5vw); top:calc(50% - 2.5vw);"></div>';
           echo '<div class="depart" id="D4" style="left:calc(50% - 2.5vw); top:calc(100% - 5vw);"></div>';
           echo '<div class="robot" id="robot-R1" style="left: calc(' . floor($pos_robots["R1_X"] / 3) . '% - 2.5vw);top: calc(' . floor($pos_robots["R1_Y"] / 2) . '% - 2.5vw);transform: rotate(' . $pos_robots["R1_theta"] . 'deg);">R1</div>';
-          echo '<div class="robot" id="robot-R2" style="left: calc(' . floor($pos_robots["R2_X"] / 3) . '% - 2.5vw);top: calc(' . floor($pos_robots["R2_Y"] / 2) . '% - 2.5vw);transform: rotate(' . $pos_robots["R2_theta"] . 'deg);">R2</div>';
-          /*echo '<div class="robot adv" id="robot-R1-adv" style="left: calc(' . floor(0 / 3) . '% - 2.5vw);top: calc(' . floor(0 / 2) . '% - 2.5vw);">R3</div>';
-          echo '<div class="robot adv" id="robot-R2-adv" style="left: calc(' . floor(0 / 3) . '% - 2.5vw);top: calc(' . floor(0 / 2) . '% - 2.5vw);">R4</div>';*/
+          //echo '<div class="robot" id="robot-R2" style="left: calc(' . floor($pos_robots["R2_X"] / 3) . '% - 2.5vw);top: calc(' . floor($pos_robots["R2_Y"] / 2) . '% - 2.5vw);transform: rotate(' . $pos_robots["R2_theta"] . 'deg);">R2</div>';
+          echo '<div class="robot adv" id="robot-R1-adv" style="left: calc(' . floor($pos_robots["R1ADV_X"] / 3) . '% - 2.5vw);top: calc(' . floor($pos_robots["R1ADV_Y"] / 2) . '% - 2.5vw);transform: rotate(' . $pos_robots["R1ADV_theta"] . 'deg);">R3</div>';
+          //echo '<div class="robot adv" id="robot-R2-adv" style="left: calc(' . floor(0 / 3) . '% - 2.5vw);top: calc(' . floor(0 / 2) . '% - 2.5vw);">R4</div>';
           echo '<div style="left: calc('.floor($pos_elements["E1_X"]/3).'% - 2%);top: calc('.floor($pos_elements["E1_Y"]/2).'% - 3%);" class="element '.$pos_elements["E1_couleur"].'"></div>';
           echo '<div style="left: calc('.floor($pos_elements["E2_X"]/3).'% - 2%);top: calc('.floor($pos_elements["E2_Y"]/2).'% - 3%);" class="element '.$pos_elements["E2_couleur"].'"></div>';
           echo '<div style="left: calc('.floor($pos_elements["E3_X"]/3).'% - 2%);top: calc('.floor($pos_elements["E3_Y"]/2).'% - 3%);" class="element '.$pos_elements["E3_couleur"].'"></div>';
