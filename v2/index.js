@@ -1,7 +1,13 @@
 setInterval(function() {
-  var myImageElement = document.getElementById('testImage');
-  myImageElement.src = '/img/image.jpg?rand=' + Math.random();
-}, 1000);
+  let synthese = document.getElementById("synthese");
+  let balise = document.getElementById("balise");
+  let myImageElement = document.getElementById('testImage');
+  if (synthese.dataset.active == "active") {
+    location.reload();
+  } else if (balise.dataset.active == "active") {
+    myImageElement.src = '/img/image.jpg?rand=' + Math.random();
+  }
+}, 700);
 
 function tab(event, tab) {
     let tabs = document.getElementsByClassName("tab");
