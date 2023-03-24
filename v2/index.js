@@ -7,7 +7,7 @@ setInterval(function() {
   } else if (balise.dataset.active == "active") {
     myImageElement.src = '/img/image.jpg?rand=' + Math.random();
   }
-}, 700);
+}, 1000);
 
 function tab(event, tab) {
     let tabs = document.getElementsByClassName("tab");
